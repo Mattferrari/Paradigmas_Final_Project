@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 47
+  controlID: 100
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -324,7 +324,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Scripts
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 53
   m_LastFolders:
-  - Assets
+  - Assets/Scripts
   m_LastFoldersGridSize: 53
   m_LastProjectPath: "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de
     la Programaci\xF3n\\Proyecto_final\\MarioBrosFinalProject"
@@ -340,8 +340,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 24620000
-    m_LastClickedID: 25124
+    m_SelectedIDs: 4a620000
+    m_LastClickedID: 25162
     m_ExpandedIDs: 000000002462000026620000286200002a6200002c6200002e62000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000d0670000026800000000000092690000686c00004e6d0000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000d0670000026800000000000092690000686c00004e6d0000f8610000f4610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -510,9 +510,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 1afbffff
+      m_SelectedIDs: ba610000
+      m_LastClickedID: 25018
+      m_ExpandedIDs: b2efffff70f0ffff1afbffff5e61000074610000786100009e610000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -905,9 +905,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -3.579954, y: -1.5408798, z: -0.012455217}
+    m_Target: {x: -4.7475, y: 1, z: 0}
     speed: 2
-    m_Value: {x: -3.579954, y: -1.5408798, z: -0.012455217}
+    m_Value: {x: -4.747498, y: 0.9999999, z: -0.000000018096861}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -957,9 +957,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 4.796671
+    m_Target: 5.3047743
     speed: 2
-    m_Value: 4.796671
+    m_Value: 5.304775
   m_Ortho:
     m_Target: 1
     speed: 2
