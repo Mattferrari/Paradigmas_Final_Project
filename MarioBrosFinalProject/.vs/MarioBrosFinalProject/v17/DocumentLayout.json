@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\matte\\onedrive\\escritorio\\3imat\\paradigmas de la programaci\u00F3n\\proyecto_final\\mariobrosfinalproject\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\matte\\onedrive\\escritorio\\3imat\\paradigmas de la programaci\u00F3n\\proyecto_final\\mariobrosfinalproject\\assets\\scripts\\playercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Player.cs",
-              "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\Player.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
-              "ToolTip": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\Player.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "PlayerControler.cs",
+              "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\PlayerControler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControler.cs",
+              "ToolTip": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\PlayerControler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\PlayerControler.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACsAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-07T15:57:50.765Z",
+              "WhenOpened": "2024-11-08T16:29:22.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\Camera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Camera.cs",
+              "ToolTip": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\Camera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Camera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-08T16:06:49.748Z",
               "EditorCaption": ""
             }
           ]

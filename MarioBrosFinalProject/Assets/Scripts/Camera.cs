@@ -5,7 +5,7 @@ using UnityEngine;
 public class Camera : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    public Vector3 offset;
     public Transform player;
 
     void Start()
@@ -16,6 +16,6 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = player.position;
+        transform.position = player.position + offset;
     }
 }
