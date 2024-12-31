@@ -161,6 +161,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffa9202f90995f4eba523ab8d0b41a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mario: {fileID: 2605014162388732571, guid: b54e5ae873e97f54483526fb8b19f455, type: 3}
+  Mario: {fileID: 0}
   goingLeft: 0
   speed: 2
