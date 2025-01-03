@@ -19,8 +19,6 @@ public class GoombaMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         goingLeft = true;
-
-
     }
 
     // Update is called once per frame
@@ -39,7 +37,7 @@ public class GoombaMovement : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Element"))
+        if (collision.gameObject.CompareTag("Element") || collision.gameObject.CompareTag("Enemy"))
         {
             if (goingLeft)
             {

@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{E9F6A016-2E51-0BDE-BADE-0AF8BEBF4684}|Assembly-CSharp.csproj|c:\\users\\matte\\onedrive\\escritorio\\3imat\\paradigmas de la programaci\u00F3n\\proyecto_final\\new unity project (1)\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E9F6A016-2E51-0BDE-BADE-0AF8BEBF4684}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E9F6A016-2E51-0BDE-BADE-0AF8BEBF4684}|Assembly-CSharp.csproj|c:\\users\\matte\\onedrive\\escritorio\\3imat\\paradigmas de la programaci\u00F3n\\proyecto_final\\new unity project (1)\\assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E9F6A016-2E51-0BDE-BADE-0AF8BEBF4684}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Camera.cs",
+              "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\New Unity Project (1)\\Assets\\Scripts\\Camera.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Camera.cs",
+              "ToolTip": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\New Unity Project (1)\\Assets\\Scripts\\Camera.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Camera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-06T03:05:31.94Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +41,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
               "ToolTip": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\New Unity Project (1)\\Assets\\Scripts\\Player.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-06T02:32:48.88Z",
               "EditorCaption": ""
