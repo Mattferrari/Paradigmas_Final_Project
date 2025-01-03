@@ -1,21 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class CoinLogic : MonoBehaviour
+public class FireFlower : MonoBehaviour
 {
+    private Rigidbody2D rb;
     public PlayerController Mario;
-    public GameManager GameManager;
+
 
     // Start is called before the first frame update
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        Mario = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+
         if (collision.gameObject.CompareTag("Player"))
         {
+            Mario.FireMario();
             Destroy(gameObject); // Destruye el GameObject que contiene este script
-            GameManager.instance.AddCoin();
         }
     }
 }

@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int numberLives = 5;
     public int minLives = 0;
     public int maxCoins = 100;
-    public int level;
+    public int level = 1;
     public static GameManager instance;
     // Start is called before the first frame update
     void Awake()

@@ -23,12 +23,21 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D boxCollider;
     public float defaultgravity;
 
+    public bool isFireMario = false;
+    public float fireBallTimer;
+    public float rechargeTime;
+
+    public GameObject fireBall;
+    public int perspective;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
         defaultgravity = rb.gravityScale;
+        fireBallTimer = Time.time;
+        perspective = 1;
     }
 
     void Update()
@@ -69,11 +78,19 @@ public class PlayerController : MonoBehaviour
         {
             move = -1;
             transform.localScale = new Vector2(move, 1);
+            if (perspective > 0)
+            {
+                ChangePerspective();
+            }
         }
         else if (Input.GetKey(KeyCode.D))
         {
             move = 1;
             transform.localScale = new Vector2(move, 1);
+            if (perspective < 0)
+            {
+                ChangePerspective();
+            }
         }
         else { move = 0; }
 
@@ -93,6 +110,13 @@ public class PlayerController : MonoBehaviour
         if (Dead)
         {
             Destroy(gameObject);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && isFireMario && Time.time - fireBallTimer > rechargeTime)
+        {
+            ThrowFire();
+            fireBallTimer = Time.time;
+
         }
 
         Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
@@ -124,6 +148,11 @@ public class PlayerController : MonoBehaviour
         Vector2 velocity = new Vector2(velocityX, rb.velocity.y);
         rb.velocity = velocity;
     }
+
+    void ChangePerspective()
+    {
+        perspective *= -1;
+    }
     void Jump()
     {
         
@@ -146,5 +175,19 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;  // Permite saltar nuevamente cuando Mario toca el suelo
         }
     }
-    
+    public void FireMario()
+    {
+        isFireMario = true;
+    }
+
+    public void ThrowFire()
+    {
+        Vector3 offset = new Vector3(perspective, 0, 0);
+        Vector3 spawnPosition = transform.position + offset;
+        GameObject fireball = Instantiate(fireBall, spawnPosition, Quaternion.identity);
+
+        fireball.GetComponent<FireBall>().SetMario(this);
+
+    }
+
 }

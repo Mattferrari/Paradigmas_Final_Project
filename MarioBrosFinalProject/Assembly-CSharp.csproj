@@ -63,12 +63,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\MysteryBlock.cs" />
     <Compile Include="Assets\Scripts\PipeControler.cs" />
+    <Compile Include="Assets\Scripts\FireFlower.cs" />
     <Compile Include="Assets\Scripts\GoombaMovement.cs" />
     <Compile Include="Assets\Scripts\CoinLogic.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\PlayerControler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\MushroomLogic.cs" />
+    <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\KoopaMovement.cs" />
   </ItemGroup>
