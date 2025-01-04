@@ -8,6 +8,7 @@ TagManager:
   - Element
   - Enemy
   - Mushroom
+  - Attack
   layers:
   - Default
   - TransparentFX

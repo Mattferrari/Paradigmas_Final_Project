@@ -20,12 +20,8 @@ public class GameManager : MonoBehaviour
             instance = this;
         }
         else { Destroy(gameObject); }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        DontDestroyOnLoad(gameObject);
     }
     public void AddCoin()
     {
@@ -51,6 +47,12 @@ public class GameManager : MonoBehaviour
 
     }
 
+    public void GainLife()
+    {
+        numberLives++;
+        UpdateHUD();
+    }
+
     public void NextLevel()
     {
         level++;
@@ -63,6 +65,18 @@ public class GameManager : MonoBehaviour
         // Método para actualizar la interfaz del jugador
         // Aquí llamarás a un script del HUD para actualizar texto, imágenes, etc.
         UIManager.instance.UpdateHUD(numberCoins, numberLives, level);
+    }
+
+    public void RemoveAllEnemies()
+    {
+        // Obtiene todos los objetos con la etiqueta "Enemy"
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        // Recorre el array y destruye cada enemigo
+        foreach (GameObject enemy in enemies)
+        {
+            Destroy(enemy);
+        }
     }
 
     private void GameOver()
