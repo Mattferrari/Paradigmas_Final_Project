@@ -73,7 +73,9 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PoleFlag.cs" />
     <Compile Include="Assets\Scripts\CastleLevelChanger.cs" />
+
     <Compile Include="Assets\Scripts\DieZone.cs" />
+
     <Compile Include="Assets\Scripts\Menu\LevelSelector.cs" />
     <Compile Include="Assets\Scripts\MushroomLogic.cs" />
     <Compile Include="Assets\Scripts\FireBall.cs" />
