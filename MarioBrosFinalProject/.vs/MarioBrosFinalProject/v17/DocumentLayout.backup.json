@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\",
   "Documents": [
     {
-<<<<<<< Updated upstream
+
+      "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|c:\\users\\matte\\onedrive\\escritorio\\3imat\\paradigmas de la programaci\u00F3n\\proyecto_final\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\camerazoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camerazoom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\castlelevelchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\castlelevelchanger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-<<<<<<< Updated upstream
+
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\playercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\playercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -18,66 +22,27 @@
     {
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|c:\\users\\matte\\onedrive\\escritorio\\3imat\\paradigmas de la programaci\u00F3n\\proyecto_final\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\fireflower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\fireflower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\urtia\\comillas\\3\\1q\\paradigmas\\proyecto_final\\mariobrosfinalproject\\assets\\scripts\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\coinlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coinlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\koopamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\koopamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
+
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
+
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|c:\\users\\matte\\onedrive\\escritorio\\3imat\\paradigmas de la programaci\u00F3n\\proyecto_final\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\poleflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\poleflag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\flag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\coinlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\coinlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
-    },
-    {
-<<<<<<< Updated upstream
-=======
+
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\goombamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goombamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-<<<<<<< Updated upstream
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
->>>>>>> Stashed changes
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\goombamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goombamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -112,13 +77,11 @@
     {
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\koopamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\koopamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-<<<<<<< Updated upstream
     },
     {
       "AbsoluteMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91CD8163-E5E3-43EE-6CD1-DE60549D6DE3}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-=======
+
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\mushroomlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mushroomlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -133,8 +96,7 @@
     {
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
     }
   ],
   "DocumentGroupContainers": [
@@ -144,20 +106,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-<<<<<<< Updated upstream
+
           "SelectedChildIndex": 3,
-=======
-<<<<<<< Updated upstream
+
           "SelectedChildIndex": 11,
-=======
+
           "SelectedChildIndex": 0,
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-<<<<<<< Updated upstream
+
               "DocumentIndex": 3,
+
+              "DocumentIndex": 0,
+              "Title": "CameraZoom.cs",
+              "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\CameraZoom.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CameraZoom.cs",
+              "ToolTip": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\CameraZoom.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CameraZoom.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-04T01:39:33.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Flag.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Flag.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Flag.cs",
@@ -165,15 +141,14 @@
               "RelativeToolTip": "Assets\\Scripts\\Flag.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:37:45.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:37:45.186Z"
             },
             {
               "$type": "Document",
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
+
               "DocumentIndex": 2,
+
+              "DocumentIndex": 3,
               "Title": "PoleFlag.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\PoleFlag.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PoleFlag.cs",
@@ -181,12 +156,11 @@
               "RelativeToolTip": "Assets\\Scripts\\PoleFlag.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-04T00:20:49.1Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-04T00:20:49.1Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "CastleLevelChanger.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\CastleLevelChanger.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CastleLevelChanger.cs",
@@ -194,12 +168,11 @@
               "RelativeToolTip": "Assets\\Scripts\\CastleLevelChanger.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-03T23:31:12.76Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-03T23:31:12.76Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "FireBall.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\FireBall.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FireBall.cs",
@@ -211,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "FireFlower.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\FireFlower.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\FireFlower.cs",
@@ -219,16 +192,15 @@
               "RelativeToolTip": "Assets\\Scripts\\FireFlower.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< Updated upstream
               "WhenOpened": "2025-01-03T18:29:56.358Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-=======
+
               "WhenOpened": "2025-01-03T18:29:56.358Z",
               "EditorCaption": ""
-=======
+
               "DocumentIndex": 0,
               "Title": "MainMenu.cs",
               "DocumentMoniker": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\Menu\\MainMenu.cs",
@@ -348,12 +320,12 @@
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwAsAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-08T16:29:22.827Z"
->>>>>>> Stashed changes
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
->>>>>>> Stashed changes
+
+              "DocumentIndex": 10,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Proyecto_final\\MarioBrosFinalProject\\Assets\\Scripts\\Camera.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Camera.cs",
@@ -365,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "PipeControler.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\PipeControler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PipeControler.cs",
@@ -377,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "KoopaMovement.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\KoopaMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\KoopaMovement.cs",
@@ -389,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "UIManager.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\UIManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\UIManager.cs",
@@ -401,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
@@ -409,12 +381,11 @@
               "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T21:12:03.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-02T21:12:03.866Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CoinLogic.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\CoinLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CoinLogic.cs",
@@ -426,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GoombaMovement.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\GoombaMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GoombaMovement.cs",
@@ -438,7 +409,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MushroomLogic.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\MushroomLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MushroomLogic.cs",
@@ -450,7 +421,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "MysteryBlock.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\MysteryBlock.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\MysteryBlock.cs",
@@ -462,7 +433,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PlayerControler.cs",
               "DocumentMoniker": "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de la Programaci\u00F3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\PlayerControler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PlayerControler.cs",

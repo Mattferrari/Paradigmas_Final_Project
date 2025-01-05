@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
 
-    public int numberCoins = 0;
-    public int numberLives = 5;
-    public int minLives = 0;
-    public int maxCoins = 100;
-    public int level = 1;
+    public int numberCoins;
+    public int numberLives;
+    public int minLives;
+    public int maxCoins;
+    public int level;
     public static GameManager instance;
     // Start is called before the first frame update
     void Awake()
@@ -18,10 +18,17 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        else { Destroy(gameObject); }
+        else
+        {
+            Destroy(gameObject);
+        }
 
-        DontDestroyOnLoad(gameObject);
+        // Verifica el valor de numberLives al iniciar
+        Debug.Log("Número de vidas al iniciar la escena: " + numberLives);
+
+
     }
     public void AddCoin()
     {
@@ -38,18 +45,25 @@ public class GameManager : MonoBehaviour
     }
     public void LooseLife()
     {
+        Debug.Log(numberLives);
         numberLives--;
+        
         if (numberLives == 0)
         {
             GameOver();
         }
-        else { UpdateHUD(); }
+        else 
+        {
+            ReloadLevel();
+            UpdateHUD(); 
+        }
 
     }
 
     public void GainLife()
     {
         numberLives++;
+        Debug.Log("1 mas");
         UpdateHUD();
     }
 
@@ -62,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     public void UpdateHUD()
     {
+        Debug.Log("Siempre entto");
         // Método para actualizar la interfaz del jugador
         // Aquí llamarás a un script del HUD para actualizar texto, imágenes, etc.
         UIManager.instance.UpdateHUD(numberCoins, numberLives, level);
@@ -83,5 +98,12 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Game Over!");
         SceneManager.LoadScene("GameOverScene"); // Escena de Game Over
+    }
+
+    private void ReloadLevel()
+    {
+        // Recarga la escena actual
+        string currentScene = "Level" + level.ToString();
+        SceneManager.LoadScene(currentScene);
     }
 }

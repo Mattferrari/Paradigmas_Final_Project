@@ -5,9 +5,9 @@ using UnityEngine;
 public class FireBall : MonoBehaviour
 {
 
-    private float speed = 5;
-    private float lifeTime = 5;
-    private Vector2 jumpForce = new Vector2(0, 1f);
+    private float speed = 6;
+    private float lifeTime = 3;
+    private float force = 5f;
     private bool isGrounded = false;
     private float timer;
     public Rigidbody2D rb;
@@ -23,6 +23,7 @@ public class FireBall : MonoBehaviour
     {
         timer = Time.time;
         rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 2f;
         move = Mario.perspective;
     }
 
@@ -63,10 +64,15 @@ public class FireBall : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        isGrounded = false;
+        if ((collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Element")) && collision.otherCollider == lowerCollider)
+        {
+            isGrounded = false;
+        }
     }
     private void Jump()
     {
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        Vector2 jumpForce = new Vector2(0, force);
         rb.AddForce(jumpForce, ForceMode2D.Impulse);
     }
 

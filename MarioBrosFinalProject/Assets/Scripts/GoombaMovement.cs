@@ -57,7 +57,7 @@ public class GoombaMovement : MonoBehaviour
 
         if (collision.otherCollider == lowerCollider && collision.gameObject.CompareTag("Player"))
         {
-            Mario.Dead = true;
+            Mario.GetHit();
         }
     }
 }

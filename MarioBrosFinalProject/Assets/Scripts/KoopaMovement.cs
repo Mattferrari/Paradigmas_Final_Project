@@ -12,7 +12,7 @@ public class KoopaMovement : MonoBehaviour
     private float speed = 2f;  // Velocidad de movimiento
     private float time;  // Tiempo en el que Koopa se convierte en cáscara
     private float timeBeingShell = 5f;  // Tiempo que Koopa pasa en su estado de cáscara
-    private float maxDistanceToFollow = 100;
+    private float maxDistanceToFollow = 10;
     private bool follow;
     private int speedBooster = 5;
 
@@ -65,10 +65,18 @@ public class KoopaMovement : MonoBehaviour
         
         if (marioPosition.x > koopaPosition.x && follow)
         {
+            if (move == -1)
+            {
+                transform.localScale = new Vector2(-1, 1);
+            }
             move = 1;  // Koopa se mueve hacia la derecha si Mario está a la derecha
         }
         else if (follow)
         {
+            if (move == 1)
+            {
+                transform.localScale = new Vector2(1, 1);
+            }
             move = -1;  // Koopa se mueve hacia la izquierda si Mario está a la izquierda
         }
         if (!follow) 
@@ -113,7 +121,7 @@ public class KoopaMovement : MonoBehaviour
         }
         else if (collision.otherCollider == lowerCollider && collision.gameObject.CompareTag("Player") && !shell)
         {
-            mario.Dead = true;
+            mario.GetHit();
         }
         else if (collision.otherCollider == lowerCollider && collision.gameObject.CompareTag("Player") && shell)
         {
@@ -126,6 +134,14 @@ public class KoopaMovement : MonoBehaviour
             {
                 move = -move;
                 Move(move);
+                if (move == -1)
+                {
+                    transform.localScale = new Vector2(-1, 1);
+                }
+                else if (move == 1)
+                {
+                    transform.localScale = new Vector2(1, 1);
+                }
             }
             else
             {
