@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
@@ -23,12 +24,15 @@ public class PlayerController : MonoBehaviour
     public BoxCollider2D boxCollider;
     public float defaultgravity;
 
+    public bool isBigMario = false;
     public bool isFireMario = false;
     public float fireBallTimer;
     public float rechargeTime;
 
     public GameObject fireBall;
     public int perspective;
+
+    public GameManager manager;
 
     void Start()
     {
@@ -45,6 +49,7 @@ public class PlayerController : MonoBehaviour
         // TODO
         // función aparte
         // Mario/Luigi key diferences
+
 
         if (isJumping)
         {
@@ -72,7 +77,6 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
 
         if (Input.GetKey(KeyCode.A)) 
         {
@@ -109,7 +113,8 @@ public class PlayerController : MonoBehaviour
 
         if (Dead)
         {
-            Destroy(gameObject);
+            Debug.Log("I lost");
+            manager.LooseLife();
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isFireMario && Time.time - fireBallTimer > rechargeTime)
@@ -121,7 +126,8 @@ public class PlayerController : MonoBehaviour
 
         Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
         Animator.SetBool("Grounded", isGrounded);
-        Animator.SetFloat("Size", boxCollider.size.y);
+        Animator.SetBool("isBigMario", isBigMario);
+        Animator.SetBool("isFireMario", isFireMario);
     }
 
     private void FixedUpdate()
@@ -175,9 +181,34 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;  // Permite saltar nuevamente cuando Mario toca el suelo
         }
     }
+
+    public void GetHit()
+    {
+        if (isFireMario)
+        {
+            isFireMario = false;
+            isBigMario = true;
+        }
+        else if (isBigMario)
+        {
+            isBigMario = false;
+            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / 2);
+            boxCollider.offset = new Vector2(boxCollider.offset.x, boxCollider.offset.y - 0.5f);
+        }
+        else
+        {
+            Die();
+        }
+    }
+    public void Die()
+    {
+        Debug.Log("Mori");
+        Dead = true;
+    }
     public void FireMario()
     {
         isFireMario = true;
+        isBigMario = false;
     }
 
     public void ThrowFire()
@@ -188,6 +219,10 @@ public class PlayerController : MonoBehaviour
 
         fireball.GetComponent<FireBall>().SetMario(this);
 
+    }
+    public void BigMario()
+    {
+        isBigMario = true;
     }
 
 }

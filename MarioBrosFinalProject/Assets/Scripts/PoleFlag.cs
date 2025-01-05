@@ -16,6 +16,7 @@ public class PoleFlag : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Player"))
             {
+                levelPassed = true;
                 gameManager.RemoveAllEnemies();
                 collision.gameObject.transform.position += new Vector3(1, 0, 0);
                 flag.PullDown();
@@ -25,7 +26,7 @@ public class PoleFlag : MonoBehaviour
                 gameManager.GainLife();
                 // Imagen 1UP
             }
-            levelPassed = true;
+            
         }
         
     }

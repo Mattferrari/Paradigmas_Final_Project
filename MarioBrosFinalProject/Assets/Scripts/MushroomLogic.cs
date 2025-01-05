@@ -55,6 +55,7 @@ public class MushroomLogic : MonoBehaviour
             {
                 Mario.boxCollider.size = new Vector2(Mario.boxCollider.size.x, Mario.boxCollider.size.y * 2);
                 Mario.boxCollider.offset = new Vector2(Mario.boxCollider.offset.x, Mario.boxCollider.offset.y + 0.5f);
+                Mario.isBigMario = true;
             }
             
         }

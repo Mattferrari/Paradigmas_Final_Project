@@ -13,10 +13,14 @@ public class CastleLevelChanger : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("You have passed to the next level!");
-        SceneManager.LoadScene("NextLevelScene");
-        gameManager.NextLevel();
-        player.transform.position = Castle.transform.position;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("You have passed to the next level!");
+            SceneManager.LoadScene("NextLevelScene");
+            gameManager.NextLevel();
+            player.transform.position = Castle.transform.position;
+        }
+        
         //Camera.transform.position = 
     }
 }
