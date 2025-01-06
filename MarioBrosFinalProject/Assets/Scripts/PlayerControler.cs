@@ -133,26 +133,8 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Vector2 forceAcceleration = new Vector2((int)move * acceleration, 0f);
-        //rb.AddForce(forceAcceleration);
-        //Debug.Log(forceAcceleration);
-        float vBase = rb.velocity.x;
-        if (vBase <= speed && vBase >= -speed)
-        {
-            vBase = speed*move;
-        }
-        float velocityX = vBase + move*acceleration*Time.deltaTime;
 
-        if (velocityX >= maxspeed | velocityX <= -maxspeed)
-        {
-            //velocityX = Mathf.Clamp(rb.velocity.x, -maxspeed, maxspeed);
-            velocityX = move * maxspeed;
-            Debug.Log("Hola2");
-        }
-
-        Debug.Log(velocityX);
-
-        Vector2 velocity = new Vector2(velocityX, rb.velocity.y);
+        Vector2 velocity = new Vector2(move*speed, rb.velocity.y);
         rb.velocity = velocity;
     }
 

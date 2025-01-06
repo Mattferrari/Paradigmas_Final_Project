@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   numberCoins: 0
-  numberLives: 10
+  numberLives: 5
   minLives: 0
   maxCoins: 100
   level: 1

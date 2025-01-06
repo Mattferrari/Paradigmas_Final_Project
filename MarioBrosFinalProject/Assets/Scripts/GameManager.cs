@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-
+    public int originalLives = 5;
     public int numberCoins;
     public int numberLives;
     public int minLives;
@@ -51,11 +51,12 @@ public class GameManager : MonoBehaviour
         if (numberLives == 0)
         {
             GameOver();
+            
         }
         else 
         {
             ReloadLevel();
-            UpdateHUD(); 
+            UpdateHUD();
         }
 
     }
@@ -76,7 +77,6 @@ public class GameManager : MonoBehaviour
 
     public void UpdateHUD()
     {
-        Debug.Log("Siempre entto");
         // Método para actualizar la interfaz del jugador
         // Aquí llamarás a un script del HUD para actualizar texto, imágenes, etc.
         UIManager.instance.UpdateHUD(numberCoins, numberLives, level);
@@ -97,7 +97,11 @@ public class GameManager : MonoBehaviour
     private void GameOver()
     {
         Debug.Log("Game Over!");
-        SceneManager.LoadScene("GameOverScene"); // Escena de Game Over
+        numberLives = originalLives;
+        numberCoins = 0;
+        level = 1;
+        UpdateHUD();
+        SceneManager.LoadScene("MainMenu"); // Escena de Game Over
     }
 
     private void ReloadLevel()
