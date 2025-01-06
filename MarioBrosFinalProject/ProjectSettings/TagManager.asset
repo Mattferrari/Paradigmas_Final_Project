@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Mushroom
   - Attack
+  - GameManager
   layers:
   - Default
   - TransparentFX

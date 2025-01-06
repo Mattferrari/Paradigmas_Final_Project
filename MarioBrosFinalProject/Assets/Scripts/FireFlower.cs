@@ -12,7 +12,6 @@ public class FireFlower : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Mario = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
         defaultgravity = rb.gravityScale;
         fireBallTimer = Time.time;
         perspective = 1;
+        manager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
     }
 
     void Update()
