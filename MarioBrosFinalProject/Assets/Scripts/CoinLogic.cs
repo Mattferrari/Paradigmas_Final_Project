@@ -15,7 +15,7 @@ public class CoinLogic : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject); // Destruye el GameObject que contiene este script
-            GameManager.instance.AddCoin();
+            GameManager.instance.AddCoin(); 
         }
     }
 }
