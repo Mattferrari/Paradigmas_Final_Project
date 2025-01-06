@@ -68,7 +68,9 @@
     <Compile Include="Assets\Scripts\Enemies\GoombaMovement.cs" />
     <Compile Include="Assets\Scripts\Blocks\CastleLevelChanger.cs" />
     <Compile Include="Assets\Scripts\PowerUps\Powers\FireBall.cs" />
+    <Compile Include="Assets\Scripts\Enemies\IEnemy.cs" />
     <Compile Include="Assets\Scripts\PowerUps\PowerUpObject\CoinLogic.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Paratroopa.cs" />
     <Compile Include="Assets\Scripts\GeneralGame\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\Blocks\DieZone.cs" />
     <Compile Include="Assets\Scripts\Blocks\MysteryBlock.cs" />
