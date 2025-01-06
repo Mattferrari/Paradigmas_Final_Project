@@ -8,7 +8,7 @@ public class GoombaMovement : MonoBehaviour, IEnemy
     private Rigidbody2D rb;
     
     //objects
-    public PlayerController Mario;
+    private PlayerController Mario;
     public Collider2D superiorCollider;
     public Collider2D lowerCollider;
     
@@ -50,7 +50,10 @@ public class GoombaMovement : MonoBehaviour, IEnemy
     {
         Move();
     }
-
+    void Awake()
+    {
+        Mario = GameObject.FindWithTag("Player").GetComponent< PlayerController >();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Element") || collision.gameObject.CompareTag("Enemy"))
