@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 15.0f;
     private Rigidbody2D rb;
+
     private bool isGrounded;
+    public bool canMove = true;
     public float acceleration = 1000f;
     public float maxspeed = 8f;
     public int move = 0;
@@ -79,31 +81,34 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetKey(KeyCode.A)) 
+        if (canMove)
         {
-            move = -1;
-            transform.localScale = new Vector2(move, 1);
-            if (perspective > 0)
+            if (Input.GetKey(KeyCode.A)) 
             {
-                ChangePerspective();
+                move = -1;
+                transform.localScale = new Vector2(move, 1);
+                if (perspective > 0)
+                {
+                    ChangePerspective();
+                }
             }
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            move = 1;
-            transform.localScale = new Vector2(move, 1);
-            if (perspective < 0)
+            else if (Input.GetKey(KeyCode.D))
             {
-                ChangePerspective();
+                move = 1;
+                transform.localScale = new Vector2(move, 1);
+                if (perspective < 0)
+                {
+                    ChangePerspective();
+                }
             }
-        }
-        else { move = 0; }
+            else { move = 0; }
 
-        //rb.velocity = new Vector2(move * speed, rb.velocity.y);
+            //rb.velocity = new Vector2(move * speed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Jump();
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                Jump();
+            }
         }
 
         if (Attacked)
@@ -124,6 +129,7 @@ public class PlayerController : MonoBehaviour
             fireBallTimer = Time.time;
 
         }
+
 
         Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
         Animator.SetBool("Grounded", isGrounded);
@@ -186,8 +192,23 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         Debug.Log("Mori");
+        //Eliminar colliders
+        Destroy(GetComponent<BoxCollider2D>());
+
+        //Eliminar rigidbody
+        Destroy(GetComponent<Rigidbody2D>());
+
+        //Wait one second and continue
+        StartCoroutine(DeadAnimation());
+    }
+
+    IEnumerator DeadAnimation()
+    {
+        Animator.SetBool("MarioDead", true);
+        yield return new WaitForSeconds(2);
         Dead = true;
     }
+
     public void FireMario()
     {
         isFireMario = true;

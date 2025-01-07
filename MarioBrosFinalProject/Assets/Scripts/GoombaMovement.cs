@@ -7,6 +7,8 @@ public class GoombaMovement : MonoBehaviour
     private Rigidbody2D rb;
     public PlayerController Mario;
 
+    private Animator Animator;
+
     public bool goingLeft = false;
     public float speed = 2.0f;
 
@@ -18,6 +20,7 @@ public class GoombaMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        Animator = GetComponent<Animator>();
         goingLeft = true;
     }
 
@@ -33,6 +36,7 @@ public class GoombaMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -52,7 +56,12 @@ public class GoombaMovement : MonoBehaviour
         if (collision.otherCollider == superiorCollider && collision.gameObject.CompareTag("Player"))
         {
             Mario.Attacked = true;
-            Destroy(gameObject); // Destruye el GameObject que contiene este script
+            Destroy(gameObject, 1f); // Destruye el GameObject que contiene este script
+            Animator.SetTrigger("GoombaDead");
+            Destroy(GetComponent<BoxCollider2D>());
+            Destroy(GetComponent<CircleCollider2D>());
+            Destroy(GetComponent<Rigidbody2D>());
+            speed = 0;
         }
 
         if (collision.otherCollider == lowerCollider && collision.gameObject.CompareTag("Player"))
