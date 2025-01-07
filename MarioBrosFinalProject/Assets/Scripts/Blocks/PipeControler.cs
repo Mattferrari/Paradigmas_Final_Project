@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PipeController : MonoBehaviour
 {
+    public Collider2D mainCollider;
     public PipeController exitPipe;  // El punto de salida (donde el jugador será transportado)
     public float teleportTime = 0.5f;  // Tiempo de espera antes de teletransportar al jugador
     private bool canTeleport = false;  // Bandera que indica si el jugador puede entrar en la tubería
@@ -30,9 +31,10 @@ public class PipeController : MonoBehaviour
     // Actualizar la lógica en cada frame
     void Update()
     {
-        if (canTeleport && Input.GetKeyDown(KeyCode.S))  // El jugador presiona 'Arriba' para entrar
+        if (canTeleport && Input.GetKeyDown(KeyCode.S))  // El jugador presiona 'Abajo' para entrar
         {
-            Debug.Log("Hl");
+            //Cambiar el offset del main collider
+            mainCollider.offset = new Vector2(mainCollider.offset.x, mainCollider.offset.y - 2);
             StartCoroutine(TeleportPlayer());
         }
     }
@@ -40,15 +42,29 @@ public class PipeController : MonoBehaviour
     // Coroutine para esperar un poco antes de teletransportar al jugador
     private IEnumerator TeleportPlayer()
     {
-        // Puede agregar una animación o efecto de transición aquí
-        yield return new WaitForSeconds(teleportTime);
+        float elapsed = 0f;
+        float duration = 1f;
+        GameObject player = GameObject.FindWithTag("Player");
+        player.GetComponent<PlayerController>().canMove = false;
+        Vector2 startPosition = player.transform.position;
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            // Mover al jugador hacia abajo
+            player.transform.position = Vector2.Lerp(startPosition, new Vector3(startPosition.x, startPosition.y - 2), t);
+            elapsed += Time.deltaTime;
+
+            yield return null;
+        }
 
         // Teletransportar al jugador a la posición de salida de la tubería
-        GameObject player = GameObject.FindWithTag("Player");
+        
         Vector2 newPosition = exitPipe.transform.position;
         newPosition.y += 1;
         player.transform.position = newPosition;
+        mainCollider.offset = new Vector2(mainCollider.offset.x, mainCollider.offset.y + 2);
+        player.GetComponent<PlayerController>().canMove = true;
 
-        // Opcional: Puede realizar alguna animación o efecto visual
     }
 }

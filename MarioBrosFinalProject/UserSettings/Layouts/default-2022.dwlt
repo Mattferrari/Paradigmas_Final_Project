@@ -450,9 +450,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+      m_SelectedIDs: f6670000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 14f7fffff2faffff2e640000
+=======
       m_SelectedIDs: e2be0100
       m_LastClickedID: 114402
       m_ExpandedIDs: ee49fffffa4affffa64cffff5462fffff27afffffe7dffff587ffffffa85ffff2c9bffff009dffff5a9dffffca9effffc49fffff82a2ffff26a5ffff98a7ffff22a8ffff70a9ffff7eaaffff20aeffff2aafffff6cb7ffff08c6ffffc2d0ffffd4f8fffff0fafffff4ffffffdc67000048a80000a4cd000042ce0000eece000000d9000068d90000f6d900008ce20000a6e200002c2c010056900100709001008a90010048910100
+>>>>>>> b9a72b5732971d0dd05713d4c78bb707e5efcdef
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -845,9 +851,15 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
+    m_Target: {x: 9.798317, y: 2.935215, z: 0.06550632}
+    speed: 2
+    m_Value: {x: 9.798317, y: 2.935215, z: 0.06550632}
+=======
     m_Target: {x: 6.9177046, y: 7.570946, z: 2.3461773}
     speed: 2
     m_Value: {x: 6.9177046, y: 7.570946, z: 2.3461773}
+>>>>>>> b9a72b5732971d0dd05713d4c78bb707e5efcdef
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -897,9 +909,15 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
+<<<<<<< HEAD
+    m_Target: 3.44931
+    speed: 2
+    m_Value: 3.44931
+=======
     m_Target: 15.382183
     speed: 2
     m_Value: 15.382183
+>>>>>>> b9a72b5732971d0dd05713d4c78bb707e5efcdef
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1077,15 +1095,21 @@ MonoBehaviour:
   m_LastFolders:
   - Assets/Scenes
   m_LastFoldersGridSize: 81
-  m_LastProjectPath: "C:\\Users\\matte\\OneDrive\\Escritorio\\3IMAT\\Paradigmas de
-    la Programaci\xF3n\\Proyecto_final\\Paradigmas_Final_Project\\MarioBrosFinalProject"
+  m_LastProjectPath: C:\Users\mario\OneDrive\Escritorio\ICAI3.1\Paradigmas\Repositorio
+    Proyecto\Paradigmas_Final_Project\MarioBrosFinalProject
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
+    m_SelectedIDs: a2670000
+    m_LastClickedID: 26530
+    m_ExpandedIDs: 000000008867000000ca9a3bffffff7f
+=======
     m_SelectedIDs: b8670000
     m_LastClickedID: 26552
     m_ExpandedIDs: 000000009e67000000ca9a3b
+>>>>>>> b9a72b5732971d0dd05713d4c78bb707e5efcdef
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
