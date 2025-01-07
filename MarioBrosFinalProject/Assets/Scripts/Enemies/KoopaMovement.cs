@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 
-public class KoopaMovement : MonoBehaviour
-{
+public class KoopaMovement : MonoBehaviour, IEnemy
+{ 
     public PlayerController mario;  // Referencia al jugador
     public Rigidbody2D rb;  // Rigidbody2D del Koopa
 
@@ -22,6 +23,19 @@ public class KoopaMovement : MonoBehaviour
     public Collider2D lowerCollider;
 
     // Start is called before the first frame update
+
+    public void Move()
+    {
+        
+    }
+    public void Attack()
+    {
+
+    }
+    public void GetKilled()
+    {
+
+    }
     void Start()
     {
         Animator = GetComponent<Animator>();

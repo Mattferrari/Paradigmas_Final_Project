@@ -60,24 +60,28 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.44f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Menu\UIManager.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\PowerUpObject\FireFlower.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\MysteryBlock.cs" />
-    <Compile Include="Assets\Scripts\PipeControler.cs" />
-    <Compile Include="Assets\Scripts\CameraZoom.cs" />
-    <Compile Include="Assets\Scripts\FireFlower.cs" />
-    <Compile Include="Assets\Scripts\GoombaMovement.cs" />
-    <Compile Include="Assets\Scripts\CoinLogic.cs" />
-    <Compile Include="Assets\Scripts\Camera.cs" />
-    <Compile Include="Assets\Scripts\PlayerControler.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\PoleFlag.cs" />
-    <Compile Include="Assets\Scripts\CastleLevelChanger.cs" />
-    <Compile Include="Assets\Scripts\DieZone.cs" />
+    <Compile Include="Assets\Scripts\GeneralGame\Camera.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerControler.cs" />
+    <Compile Include="Assets\Scripts\Enemies\GoombaMovement.cs" />
+    <Compile Include="Assets\Scripts\Blocks\CastleLevelChanger.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\Powers\FireBall.cs" />
+    <Compile Include="Assets\Scripts\Enemies\IEnemy.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\PowerUpObject\CoinLogic.cs" />
+    <Compile Include="Assets\Scripts\Enemies\Paratroopa.cs" />
+    <Compile Include="Assets\Scripts\GeneralGame\CameraZoom.cs" />
+    <Compile Include="Assets\Scripts\Blocks\DieZone.cs" />
+    <Compile Include="Assets\Scripts\Blocks\MysteryBlock.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\PowerUpObject\MushroomLogic.cs" />
+    <Compile Include="Assets\Scripts\PowerUps\PowerUp.cs" />
+    <Compile Include="Assets\Scripts\GeneralGame\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Blocks\PoleFlag.cs" />
     <Compile Include="Assets\Scripts\Menu\LevelSelector.cs" />
-    <Compile Include="Assets\Scripts\MushroomLogic.cs" />
-    <Compile Include="Assets\Scripts\FireBall.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\KoopaMovement.cs" />
+    <Compile Include="Assets\Scripts\Blocks\PipeControler.cs" />
+    <Compile Include="Assets\Scripts\Blocks\Flag.cs" />
+    <Compile Include="Assets\Scripts\Enemies\KoopaMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
