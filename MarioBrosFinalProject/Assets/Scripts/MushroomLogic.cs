@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushroomLogic : PowerUp
+public class MushroomLogic : MonoBehaviour
 {
     private Rigidbody2D rb;
     public PlayerController Mario;
-
-    private Animator Animator;
 
     public bool goingLeft = false;
     public float speed = 2.0f;
@@ -18,11 +16,7 @@ public class MushroomLogic : PowerUp
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-<<<<<<< HEAD:MarioBrosFinalProject/Assets/Scripts/GoombaMovement.cs
-        Animator = GetComponent<Animator>();
-=======
-        //Mario = GameObject.Find("Player").GetComponent<PlayerController>();
->>>>>>> b9a72b5732971d0dd05713d4c78bb707e5efcdef:MarioBrosFinalProject/Assets/Scripts/PowerUps/PowerUpObject/MushroomLogic.cs
+        Mario = GameObject.Find("Player").GetComponent<PlayerController>();
         goingLeft = true;
     }
 
@@ -38,7 +32,6 @@ public class MushroomLogic : PowerUp
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -57,20 +50,6 @@ public class MushroomLogic : PowerUp
 
         if (collision.gameObject.CompareTag("Player"))
         {
-<<<<<<< HEAD:MarioBrosFinalProject/Assets/Scripts/GoombaMovement.cs
-            Mario.Attacked = true;
-            Destroy(gameObject, 1f); // Destruye el GameObject que contiene este script
-            Animator.SetTrigger("GoombaDead");
-            Destroy(GetComponent<BoxCollider2D>());
-            Destroy(GetComponent<CircleCollider2D>());
-            Destroy(GetComponent<Rigidbody2D>());
-            speed = 0;
-        }
-
-        if (collision.otherCollider == lowerCollider && collision.gameObject.CompareTag("Player"))
-        {
-            Mario.GetHit();
-=======
             Destroy(gameObject); // Destruye el GameObject que contiene este script
             if (!Mario.isFireMario)
             {
@@ -79,13 +58,11 @@ public class MushroomLogic : PowerUp
                 Mario.isBigMario = true;
             }
             
->>>>>>> b9a72b5732971d0dd05713d4c78bb707e5efcdef:MarioBrosFinalProject/Assets/Scripts/PowerUps/PowerUpObject/MushroomLogic.cs
         }
     }
 
-    public override void SetMario(PlayerController player)
+    public void SetMario(PlayerController player)
     {
-        // Configuración específica para el hongo
-        Mario = player; // Ejemplo: el hongo le da una vida al jugador
+        Mario = player;
     }
 }
