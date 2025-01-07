@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushroomLogic : MonoBehaviour
+public class MushroomLogic : PowerUp
 {
     private Rigidbody2D rb;
     public PlayerController Mario;
@@ -16,7 +16,7 @@ public class MushroomLogic : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Mario = GameObject.Find("Player").GetComponent<PlayerController>();
+        //Mario = GameObject.Find("Player").GetComponent<PlayerController>();
         goingLeft = true;
     }
 
@@ -61,8 +61,9 @@ public class MushroomLogic : MonoBehaviour
         }
     }
 
-    public void SetMario(PlayerController player)
+    public override void SetMario(PlayerController player)
     {
-        Mario = player;
+        // Configuración específica para el hongo
+        Mario = player; // Ejemplo: el hongo le da una vida al jugador
     }
 }

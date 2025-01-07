@@ -53,11 +53,11 @@ TagManager:
   - name: Obstacles
     uniqueID: 1611093601
     locked: 0
-  - name: Enemies
-    uniqueID: 3883504113
-    locked: 0
   - name: Power ups
     uniqueID: 290940597
+    locked: 0
+  - name: Enemies
+    uniqueID: 3883504113
     locked: 0
   - name: Character
     uniqueID: 672787399

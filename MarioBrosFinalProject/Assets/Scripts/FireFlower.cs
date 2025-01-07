@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FireFlower : MonoBehaviour
+public class FireFlower : PowerUp
 {
     private Rigidbody2D rb;
     public PlayerController Mario;
@@ -24,5 +24,9 @@ public class FireFlower : MonoBehaviour
             Mario.boxCollider.size = new Vector2(Mario.boxCollider.size.x, Mario.boxCollider.size.y * 2);
             Mario.boxCollider.offset = new Vector2(Mario.boxCollider.offset.x, Mario.boxCollider.offset.y + 0.5f);
         }
+    }
+    public override void SetMario(PlayerController player)
+    {
+        Mario = player;
     }
 }

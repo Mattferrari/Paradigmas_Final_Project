@@ -15,11 +15,18 @@ public class MysteryBlock : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && !alreadySpawned && collision.otherCollider == lowerCollider)
         {
-            //Spawn position is the same as this object but one unit above
+            // Spawn position is the same as this object but one unit above
             Vector3 spawnPosition = transform.position + new Vector3(0, 1, 0);
 
-            GameObject spawnedBuff = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-            spawnedBuff.GetComponent<MushroomLogic>().SetMario(Mario);
+            GameObject spawnedObject = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+
+            // Intentamos obtener el componente PowerUp del objeto instanciado
+            PowerUp powerUp = spawnedObject.GetComponent<PowerUp>();
+            if (powerUp != null)
+            {
+                powerUp.SetMario(Mario);
+            }
+
             alreadySpawned = true;
         }
     }
