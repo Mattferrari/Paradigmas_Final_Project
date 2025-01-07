@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainMenu : MonoBehaviour
+public class Flag : MonoBehaviour
 {
-    public void Quit()
+    public void PullDown()
     {
-        Application.Quit();
+
     }
 }
