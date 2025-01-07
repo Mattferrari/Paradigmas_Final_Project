@@ -94,12 +94,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SetLevel(int nLevel)
-    {
-        level = nLevel;
-        UpdateHUD();
-    }
-
     private void GameOver()
     {
         Debug.Log("Game Over!");

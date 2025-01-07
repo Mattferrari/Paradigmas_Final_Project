@@ -6,6 +6,7 @@ using UnityEngine;
 public class CoinLogic : MonoBehaviour
 {
     public PlayerController Mario;
+    public GameManager GameManager;
 
     // Start is called before the first frame update
 
