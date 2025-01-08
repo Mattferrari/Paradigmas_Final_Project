@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 
 public class KoopaMovement : MonoBehaviour
 {
-    public PlayerController mario;  // Referencia al jugador
-    public Rigidbody2D rb;  // Rigidbody2D del Koopa
+    private PlayerController mario;  // Referencia al jugador
+    private Rigidbody2D rb;  // Rigidbody2D del Koopa
 
     private Animator Animator;
 
@@ -25,6 +26,7 @@ public class KoopaMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        mario = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         Animator = GetComponent<Animator>();
         time = -1f;  // Inicializamos time a un valor negativo para que no se active en el primer frame
         move = -1;
