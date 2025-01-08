@@ -61,14 +61,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Enemy\IEnemy.cs" />
     <Compile Include="Assets\Scripts\MysteryBlock.cs" />
     <Compile Include="Assets\Scripts\PipeControler.cs" />
     <Compile Include="Assets\Scripts\CameraZoom.cs" />
     <Compile Include="Assets\Scripts\FireFlower.cs" />
     <Compile Include="Assets\Scripts\GoombaMovement.cs" />
     <Compile Include="Assets\Scripts\CoinLogic.cs" />
-    <Compile Include="Assets\Scripts\IEnemy.cs" />
-    <Compile Include="Assets\Scripts\KoopaPatroopa.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\PlayerControler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -81,6 +80,7 @@
     <Compile Include="Assets\Scripts\FireBall.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\KoopaMovement.cs" />
+    <Compile Include="Assets\Scripts\Enemy\Koopa\KoopaPatroopa.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
