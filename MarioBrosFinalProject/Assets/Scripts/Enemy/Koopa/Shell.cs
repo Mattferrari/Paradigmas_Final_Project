@@ -8,6 +8,7 @@ public class Shell : MonoBehaviour, IEnemy
 {
     public PlayerController Mario;
     public Rigidbody2D rb;
+    private GameObject targetPrefab;
 
     private Animator Animator;
 
@@ -38,20 +39,30 @@ public class Shell : MonoBehaviour, IEnemy
         Destroy(gameObject);
     }
 
+
+    public void SwitchPrefab()
+    {
+        Vector3 position = transform.position;
+        Quaternion rotation = transform.rotation;
+        Destroy(gameObject);
+        GameObject newPrefab = Instantiate(targetPrefab, position, rotation);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Mario = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        targetPrefab = Resources.Load<GameObject>("Prefabs/Enemies/Koopa/Koopa");
     }
 
     // Update is called once per frame
     void Update()
     {
-            if (Time.time - t0 > shellTime)
+            if (Time.time - t0 > shellTime && !moving)
             {
-                ShellAnimation();
+            SwitchPrefab();
             }
             if (moving) { Move(); }
     }
@@ -87,11 +98,13 @@ public class Shell : MonoBehaviour, IEnemy
             if (collision.otherCollider == superiorCollider && collision.gameObject.CompareTag("Player"))
             {
                 moving = false;
+                t0 = Time.time;
             }
             else if (collision.otherCollider != superiorCollider && collision.gameObject.CompareTag("player"))
             {
                 Atack();
                 moving = false;
+                t0 = Time.time;
             }
             else if (collision.gameObject.CompareTag("Element"))
             {
