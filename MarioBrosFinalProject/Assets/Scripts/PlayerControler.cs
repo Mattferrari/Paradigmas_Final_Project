@@ -8,9 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 15.0f;
     private Rigidbody2D rb;
-
     private bool isGrounded;
-    public bool canMove = true;
     public float acceleration = 1000f;
     public float maxspeed = 8f;
     public int move = 0;
@@ -77,33 +75,31 @@ public class PlayerController : MonoBehaviour
                     }
                 }
             }
-
-            if (Input.GetKey(KeyCode.A)) 
+        if (Input.GetKey(KeyCode.A)) 
+        {
+            move = -1;
+            transform.localScale = new Vector2(move, 1);
+            if (perspective > 0)
             {
-                move = -1;
-                transform.localScale = new Vector2(move, 1);
-                if (perspective > 0)
-                {
-                    ChangePerspective();
-                }
+                ChangePerspective();
             }
-            else if (Input.GetKey(KeyCode.D))
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            move = 1;
+            transform.localScale = new Vector2(move, 1);
+            if (perspective < 0)
             {
-                move = 1;
-                transform.localScale = new Vector2(move, 1);
-                if (perspective < 0)
-                {
-                    ChangePerspective();
-                }
+                ChangePerspective();
             }
-            else { move = 0; }
+        }
+        else { move = 0; }
 
-            //rb.velocity = new Vector2(move * speed, rb.velocity.y);
+        //rb.velocity = new Vector2(move * speed, rb.velocity.y);
 
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Jump();
-            }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            Jump();
         }
 
         if (Attacked)
@@ -126,6 +122,7 @@ public class PlayerController : MonoBehaviour
         Animator.SetBool("Grounded", isGrounded);
         Animator.SetBool("isBigMario", isBigMario);
         Animator.SetBool("isFireMario", isFireMario);
+        }
     }
 
     private void FixedUpdate()
@@ -200,7 +197,6 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(2);
         manager.LooseLife();
     }
-
     public void FireMario()
     {
         isFireMario = true;

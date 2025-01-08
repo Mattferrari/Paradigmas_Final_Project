@@ -1,5 +1,7 @@
 fileFormatVersion: 2
+HEAD:MarioBrosFinalProject/Assets/Prefabs/Block/Flag/Flag.prefab.meta
 guid: 41bc7921a5daee946abc467b1c60342e
+main:MarioBrosFinalProject/Assets/Prefabs/PowerUps/Powers/Fireball.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

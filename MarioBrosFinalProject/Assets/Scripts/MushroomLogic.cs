@@ -16,7 +16,7 @@ public class MushroomLogic : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Mario = GameObject.Find("Player").GetComponent<PlayerController>();
+        //Mario = GameObject.Find("Player").GetComponent<PlayerController>();
         goingLeft = true;
     }
 
