@@ -34,7 +34,7 @@ public class Koopa : MonoBehaviour, IEnemy
         }
 
 
-        transform.localScale = new Vector2(movedir, 1);
+        transform.localScale = new Vector2(-movedir, 1);
         rb.velocity = new Vector2(movedir * speed, rb.velocity.y);
 
     }
