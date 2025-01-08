@@ -29,7 +29,6 @@ public class KoopaPatroopa : MonoBehaviour, IEnemy
     public void GetKilled()
     {
         SwitchPrefab();
-        Mario.Attacked = true;
     }
     
     public void Move()
@@ -76,7 +75,11 @@ public class KoopaPatroopa : MonoBehaviour, IEnemy
         if (collision.collider.CompareTag("Player"))
         {
             if (collision.otherCollider == lowerCollider) { Atack(); }
-            else { GetKilled(); }
+            else 
+            { 
+                GetKilled();
+                Mario.Attacked = true;
+            }
         }
         else { movedir *= -1; }
         
