@@ -40,7 +40,6 @@ public class GameManager : MonoBehaviour
     }
     public void LooseLife()
     {
-        Debug.Log(numberLives);
         numberLives--;
         
         if (numberLives == 0)
