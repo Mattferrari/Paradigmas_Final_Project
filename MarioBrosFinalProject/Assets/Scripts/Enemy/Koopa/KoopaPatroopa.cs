@@ -62,7 +62,6 @@ public class KoopaPatroopa : MonoBehaviour, IEnemy
         Mario = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         targetPrefab = Resources.Load<GameObject>("Prefabs/Enemies/Koopa/Koopa");
-        if (targetPrefab != null) { Debug.Log("Prefab cargado correctamente: " + targetPrefab.name); } else { Debug.LogError("Error: No se pudo cargar el prefab."); }
     }
 
     // Update is called once per frame
