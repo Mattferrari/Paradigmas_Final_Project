@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoombaMovement : MonoBehaviour
+public class Goomba : MonoBehaviour
 {
     private Rigidbody2D rb;
     public PlayerController Mario;
