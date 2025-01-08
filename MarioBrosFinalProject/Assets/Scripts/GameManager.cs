@@ -24,11 +24,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        // Verifica el valor de numberLives al iniciar
-        Debug.Log("Número de vidas al iniciar la escena: " + numberLives);
-
-
     }
     public void AddCoin()
     {
