@@ -8,7 +8,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 15.0f;
     private Rigidbody2D rb;
+
     private bool isGrounded;
+    public bool canMove = true;
     public float acceleration = 1000f;
     public float maxspeed = 8f;
     public int move = 0;
@@ -47,63 +49,62 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // TODO
-        // función aparte
-        // Mario/Luigi key diferences
 
-
-        if (isJumping)
+        if (canMove)
         {
-            if (rb.velocity.y < 0f)
+            if (isJumping)
             {
-                rb.gravityScale = defaultgravity;
-                if (isGrounded)
+                if (rb.velocity.y < 0f)
                 {
-                    isJumping = false;
-                    jumpTimer = 0f;
-                }    
-            }
-            else if (rb.velocity.y > 0f)
-            {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    jumpTimer += Time.deltaTime;
-                }
-                if (Input.GetKeyUp(KeyCode.W))
-                {
-                    if (jumpTimer > maxJumpingTime) 
+                    rb.gravityScale = defaultgravity;
+                    if (isGrounded)
                     {
-                        rb.gravityScale = defaultgravity * 3f;
+                        isJumping = false;
+                        jumpTimer = 0f;
+                    }
+                }
+                else if (rb.velocity.y > 0f)
+                {
+                    if (Input.GetKey(KeyCode.W))
+                    {
+                        jumpTimer += Time.deltaTime;
+                    }
+                    if (Input.GetKeyUp(KeyCode.W))
+                    {
+                        if (jumpTimer > maxJumpingTime)
+                        {
+                            rb.gravityScale = defaultgravity * 3f;
+                        }
                     }
                 }
             }
-        }
 
-        if (Input.GetKey(KeyCode.A)) 
-        {
-            move = -1;
-            transform.localScale = new Vector2(move, 1);
-            if (perspective > 0)
+            if (Input.GetKey(KeyCode.A)) 
             {
-                ChangePerspective();
+                move = -1;
+                transform.localScale = new Vector2(move, 1);
+                if (perspective > 0)
+                {
+                    ChangePerspective();
+                }
             }
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            move = 1;
-            transform.localScale = new Vector2(move, 1);
-            if (perspective < 0)
+            else if (Input.GetKey(KeyCode.D))
             {
-                ChangePerspective();
+                move = 1;
+                transform.localScale = new Vector2(move, 1);
+                if (perspective < 0)
+                {
+                    ChangePerspective();
+                }
             }
-        }
-        else { move = 0; }
+            else { move = 0; }
 
-        //rb.velocity = new Vector2(move * speed, rb.velocity.y);
+            //rb.velocity = new Vector2(move * speed, rb.velocity.y);
 
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Jump();
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                Jump();
+            }
         }
 
         if (Attacked)
@@ -125,7 +126,10 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+        if (rb)
+        {
+            Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+        }
         Animator.SetBool("Grounded", isGrounded);
         Animator.SetBool("isBigMario", isBigMario);
         Animator.SetBool("isFireMario", isFireMario);
@@ -133,9 +137,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        Vector2 velocity = new Vector2(move*speed, rb.velocity.y);
-        rb.velocity = velocity;
+        if (rb)
+        {
+            Vector2 velocity = new Vector2(move*speed, rb.velocity.y);
+            rb.velocity = velocity;
+        }
     }
 
     void ChangePerspective()
@@ -186,8 +192,24 @@ public class PlayerController : MonoBehaviour
     public void Die()
     {
         Debug.Log("Mori");
+        //Eliminar colliders
+        Destroy(GetComponent<BoxCollider2D>());
+
+        //Eliminar rigidbody
+        Destroy(GetComponent<Rigidbody2D>());
+
+        //Wait one second and continue
+        StartCoroutine(DeadAnimation());
+    }
+
+    IEnumerator DeadAnimation()
+    {
+        Animator.SetBool("MarioDead", true);
+        yield return new WaitForSeconds(2);
+        canMove = false;
         Dead = true;
     }
+
     public void FireMario()
     {
         isFireMario = true;

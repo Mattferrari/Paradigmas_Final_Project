@@ -7,6 +7,9 @@ public class KoopaMovement : MonoBehaviour
 {
     public PlayerController mario;  // Referencia al jugador
     public Rigidbody2D rb;  // Rigidbody2D del Koopa
+
+    private Animator Animator;
+
     public bool shell = false;  // Determina si Koopa está en su estado de cáscara
     private int move;  // Dirección de movimiento
     private float speed = 2f;  // Velocidad de movimiento
@@ -22,8 +25,9 @@ public class KoopaMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Animator = GetComponent<Animator>();
         time = -1f;  // Inicializamos time a un valor negativo para que no se active en el primer frame
-        move = 1;
+        move = -1;
     }
 
     // Update is called once per frame
@@ -96,6 +100,7 @@ public class KoopaMovement : MonoBehaviour
     // Activa o desactiva el estado de cáscara de Koopa
     private void Shell()
     {
+        Animator.SetTrigger("Shell");
         shell = !shell;
         if (!shell)
         {

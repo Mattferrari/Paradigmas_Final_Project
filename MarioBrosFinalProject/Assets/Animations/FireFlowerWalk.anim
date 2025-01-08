@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Run
+  m_Name: FireFlowerWalk
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 21300000, guid: 5bbdf6d484d3bfe4cb1e06477f3c73b0, type: 3}
+      value: {fileID: 21300000, guid: 267bbb7dc528e324984be4ed72606ba0, type: 3}
     - time: 0.05
-      value: {fileID: 21300000, guid: deb49aae190a281429bf92d4b305ab84, type: 3}
+      value: {fileID: 21300000, guid: d28739441ac82ad44acee8240b25d18b, type: 3}
     - time: 0.1
-      value: {fileID: 21300000, guid: da75e0b300435dd4a8c5b5d06ce582a2, type: 3}
+      value: {fileID: 21300000, guid: 4622776ba74b8254dabfd549c5641bcb, type: 3}
     - time: 0.15
-      value: {fileID: 21300000, guid: 5bbdf6d484d3bfe4cb1e06477f3c73b0, type: 3}
+      value: {fileID: 21300000, guid: 267bbb7dc528e324984be4ed72606ba0, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,10 +50,10 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 5bbdf6d484d3bfe4cb1e06477f3c73b0, type: 3}
-    - {fileID: 21300000, guid: deb49aae190a281429bf92d4b305ab84, type: 3}
-    - {fileID: 21300000, guid: da75e0b300435dd4a8c5b5d06ce582a2, type: 3}
-    - {fileID: 21300000, guid: 5bbdf6d484d3bfe4cb1e06477f3c73b0, type: 3}
+    - {fileID: 21300000, guid: 267bbb7dc528e324984be4ed72606ba0, type: 3}
+    - {fileID: 21300000, guid: d28739441ac82ad44acee8240b25d18b, type: 3}
+    - {fileID: 21300000, guid: 4622776ba74b8254dabfd549c5641bcb, type: 3}
+    - {fileID: 21300000, guid: 267bbb7dc528e324984be4ed72606ba0, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

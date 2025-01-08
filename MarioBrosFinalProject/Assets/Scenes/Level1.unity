@@ -10201,7 +10201,7 @@ Transform:
   m_GameObject: {fileID: 1267500032}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -32.27, y: -0.29, z: 0}
+  m_LocalPosition: {x: -1.27, y: -0.29, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11612,6 +11612,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleCollider: {fileID: 1370870531}
   gameManager: {fileID: 0}
+  levelPassed: 0
   flag: {fileID: 700711951}
 --- !u!1 &1408540712
 GameObject:
