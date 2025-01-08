@@ -46,7 +46,6 @@ public class Koopa : MonoBehaviour, IEnemy
     public void GetKilled()
     {
         SwitchPrefab();
-        Mario.Attacked = true;
     }
 
     public void SwitchPrefab()
@@ -100,7 +99,6 @@ public class Koopa : MonoBehaviour, IEnemy
 
         if (collision.otherCollider == superiorCollider && collision.gameObject.CompareTag("Player"))
         {
-            Shell();
             GetKilled();
             Mario.Attacked = true;
         }
