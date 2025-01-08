@@ -29,6 +29,7 @@ public class KoopaPatroopa : MonoBehaviour, IEnemy
     public void GetKilled()
     {
         SwitchPrefab();
+        Mario.Attacked = true;
     }
     
     public void Move()
@@ -58,7 +59,7 @@ public class KoopaPatroopa : MonoBehaviour, IEnemy
     // Start is called before the first frame update
     void Start()
     {
-        Mario = GetComponent<PlayerController>();
+        Mario = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         rb = GetComponent<Rigidbody2D>();
         targetPrefab = Resources.Load<GameObject>("Prefabs/Enemies/Koopa/Koopa");
     }
@@ -71,7 +72,7 @@ public class KoopaPatroopa : MonoBehaviour, IEnemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("player"))
+        if (collision.collider.CompareTag("Player"))
         {
             if (collision.otherCollider == lowerCollider) { Atack(); }
             else { GetKilled(); }
