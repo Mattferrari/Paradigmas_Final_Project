@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Paradigmas_Final_Project\\MarioBrosFinalProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\goombamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\urtia\\comillas\\3\\1q\\paradigmas\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\goombamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\goombamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\urtia\\comillas\\3\\1q\\paradigmas\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\ienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ienemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\koopamovement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -27,6 +31,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "IEnemy.cs",
+              "DocumentMoniker": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\IEnemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\IEnemy.cs",
+              "ToolTip": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\IEnemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\IEnemy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T14:46:45.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "KoopaMovement.cs",
               "DocumentMoniker": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\KoopaMovement.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\KoopaMovement.cs",
@@ -34,8 +51,7 @@
               "RelativeToolTip": "Assets\\Scripts\\KoopaMovement.cs",
               "ViewState": "AgIAAIIAAAAAAAAAAAAwwJ8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T08:55:56.105Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-08T08:55:56.105Z"
             },
             {
               "$type": "Document",
@@ -45,7 +61,7 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\GoombaMovement.cs",
               "ToolTip": "C:\\Users\\urtia\\comillas\\3\\1Q\\Paradigmas\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\GoombaMovement.cs",
               "RelativeToolTip": "Assets\\Scripts\\GoombaMovement.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAQwCAAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-08T08:54:00.627Z",
               "EditorCaption": ""

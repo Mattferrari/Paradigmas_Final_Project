@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\GoombaMovement.cs" />
     <Compile Include="Assets\Scripts\CoinLogic.cs" />
     <Compile Include="Assets\Scripts\IEnemy.cs" />
+    <Compile Include="Assets\Scripts\KoopaPatroopa.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
     <Compile Include="Assets\Scripts\PlayerControler.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />

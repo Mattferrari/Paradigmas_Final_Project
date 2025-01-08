@@ -6,5 +6,5 @@ public interface IEnemy
 {
     void Atack();
     void GetKilled();
-    void move();
+    void Move();
 }
