@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4946502344681777022}
   m_Layer: 0
   m_Name: Patroopa
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,8 +90,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -411463183
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 2027361538, guid: f237036469239a348a7816265a5cc290, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

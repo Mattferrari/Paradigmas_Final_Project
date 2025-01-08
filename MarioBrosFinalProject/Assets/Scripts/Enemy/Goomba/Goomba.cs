@@ -15,7 +15,7 @@ public class Goomba : MonoBehaviour
     public Collider2D superiorCollider;
     public Collider2D lowerCollider;
 
-
+    
     // Start is called before the first frame update
     void Start()
     {

@@ -16,7 +16,7 @@ public class Shell : MonoBehaviour, IEnemy
     [SerializeField] private float shellTime = 5f;
     [SerializeField] private bool moving = false;
 
-    private float t0 = Time.time;
+    private float t0;
     private int movedir = 1;
 
 
@@ -51,6 +51,7 @@ public class Shell : MonoBehaviour, IEnemy
     // Start is called before the first frame update
     void Start()
     {
+        t0 = Time.time;
         Animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         Mario = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
@@ -81,12 +82,12 @@ public class Shell : MonoBehaviour, IEnemy
                 GetKilled();
                 Mario.Attacked = true;
             }
-            else if (collision.otherCollider == leftCollider && collision.gameObject.CompareTag("player"))
+            else if (collision.otherCollider == leftCollider && collision.gameObject.CompareTag("Player"))
             {
                 moving = true;
                 movedir = 1;
             }
-            else if (collision.otherCollider == rightCollider && collision.gameObject.CompareTag("Plater"))
+            else if (collision.otherCollider == rightCollider && collision.gameObject.CompareTag("Player"))
             {
                 moving = true;
                 movedir = -1;
@@ -100,7 +101,7 @@ public class Shell : MonoBehaviour, IEnemy
                 moving = false;
                 t0 = Time.time;
             }
-            else if (collision.otherCollider != superiorCollider && collision.gameObject.CompareTag("player"))
+            else if (collision.otherCollider != superiorCollider && collision.gameObject.CompareTag("Player"))
             {
                 Atack();
                 moving = false;
