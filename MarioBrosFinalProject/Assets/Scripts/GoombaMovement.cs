@@ -27,16 +27,17 @@ public class GoombaMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (goingLeft)
+        if (rb)
         {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
+            if (goingLeft)
+            {
+                rb.velocity = new Vector2(-speed, rb.velocity.y);
+            }
+            else
+            {
+                rb.velocity = new Vector2(speed, rb.velocity.y);
+            }
         }
-        else
-        {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-        }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -61,7 +62,6 @@ public class GoombaMovement : MonoBehaviour
             Destroy(GetComponent<BoxCollider2D>());
             Destroy(GetComponent<CircleCollider2D>());
             Destroy(GetComponent<Rigidbody2D>());
-            speed = 0;
         }
 
         if (collision.otherCollider == lowerCollider && collision.gameObject.CompareTag("Player"))

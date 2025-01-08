@@ -49,40 +49,35 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // TODO
-        // función aparte
-        // Mario/Luigi key diferences
-
-
-        if (isJumping)
+        if (canMove)
         {
-            if (rb.velocity.y < 0f)
+            if (isJumping)
             {
-                rb.gravityScale = defaultgravity;
-                if (isGrounded)
+                if (rb.velocity.y < 0f)
                 {
-                    isJumping = false;
-                    jumpTimer = 0f;
-                }    
-            }
-            else if (rb.velocity.y > 0f)
-            {
-                if (Input.GetKey(KeyCode.W))
-                {
-                    jumpTimer += Time.deltaTime;
-                }
-                if (Input.GetKeyUp(KeyCode.W))
-                {
-                    if (jumpTimer > maxJumpingTime) 
+                    rb.gravityScale = defaultgravity;
+                    if (isGrounded)
                     {
-                        rb.gravityScale = defaultgravity * 3f;
+                        isJumping = false;
+                        jumpTimer = 0f;
+                    }
+                }
+                else if (rb.velocity.y > 0f)
+                {
+                    if (Input.GetKey(KeyCode.W))
+                    {
+                        jumpTimer += Time.deltaTime;
+                    }
+                    if (Input.GetKeyUp(KeyCode.W))
+                    {
+                        if (jumpTimer > maxJumpingTime)
+                        {
+                            rb.gravityScale = defaultgravity * 3f;
+                        }
                     }
                 }
             }
-        }
 
-        if (canMove)
-        {
             if (Input.GetKey(KeyCode.A)) 
             {
                 move = -1;
@@ -117,12 +112,6 @@ public class PlayerController : MonoBehaviour
             Attacked = false;
         }
 
-        if (Dead)
-        {
-            Debug.Log("I lost");
-            manager.LooseLife();
-        }
-
         if (Input.GetKeyDown(KeyCode.Space) && isFireMario && Time.time - fireBallTimer > rechargeTime)
         {
             ThrowFire();
@@ -130,8 +119,10 @@ public class PlayerController : MonoBehaviour
 
         }
 
-
-        Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+        if (rb)
+        {
+            Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+        }
         Animator.SetBool("Grounded", isGrounded);
         Animator.SetBool("isBigMario", isBigMario);
         Animator.SetBool("isFireMario", isFireMario);
@@ -139,9 +130,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        Vector2 velocity = new Vector2(move*speed, rb.velocity.y);
-        rb.velocity = velocity;
+        if (rb)
+        {
+            Vector2 velocity = new Vector2(move * speed, rb.velocity.y);
+            rb.velocity = velocity;
+        }
     }
 
     void ChangePerspective()
@@ -194,9 +187,8 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Mori");
         //Eliminar colliders
         Destroy(GetComponent<BoxCollider2D>());
-
-        //Eliminar rigidbody
         Destroy(GetComponent<Rigidbody2D>());
+        canMove = false;
 
         //Wait one second and continue
         StartCoroutine(DeadAnimation());
@@ -206,7 +198,7 @@ public class PlayerController : MonoBehaviour
     {
         Animator.SetBool("MarioDead", true);
         yield return new WaitForSeconds(2);
-        Dead = true;
+        manager.LooseLife();
     }
 
     public void FireMario()
