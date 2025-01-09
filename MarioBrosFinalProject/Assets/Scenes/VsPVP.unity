@@ -2915,6 +2915,7 @@ GameObject:
   - component: {fileID: 1470959680}
   - component: {fileID: 1470959679}
   - component: {fileID: 1470959685}
+  - component: {fileID: 1470959686}
   m_Layer: 0
   m_Name: Mario
   m_TagString: Player
@@ -3130,17 +3131,25 @@ MonoBehaviour:
   moveRightKey: 100
   moveLeftKey: 97
   sprintKey: 304
-  canMove: 1
-  perspective: 1
-  movedir: 0
   lowspeed: 5
   maxspeed: 8
-  isJumping: 0
   highJumpMinPressingTime: 1.5
-  jumpStartTimer: 0
-  defaultgravity: 0
   jumpForce: 15
-  Attacked: 0
+--- !u!114 &1470959686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470959678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f548637c980b36643b2346183f5fe9ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackKey: 8
+  rechargeTime: 0
+  fireBall: {fileID: 0}
 --- !u!1 &1473115264
 GameObject:
   m_ObjectHideFlags: 0

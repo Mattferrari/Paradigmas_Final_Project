@@ -61,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Menu\UIManager.cs" />
+    <Compile Include="Assets\Scripts\VS\PowerUps\Powers\FireBallVS.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\GeneralGame\Camera.cs" />
     <Compile Include="Assets\Scripts\Enemy\IEnemy.cs" />

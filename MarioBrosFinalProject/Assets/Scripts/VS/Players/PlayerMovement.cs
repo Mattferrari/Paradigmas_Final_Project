@@ -20,12 +20,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private KeyCode sprintKey;
 
     // general
-    [SerializeField] private bool canMove = true;
+    private bool canMove = true;
     
     // X-movement related
     // direction
-    [SerializeField] private int perspective = 1;
-    [SerializeField] private int movedir = 0;
+    private int perspective = 1;
+    private int movedir = 0;
     // speed
     private float movementSpeed;
     [SerializeField] private float lowspeed = 5f;
@@ -33,14 +33,17 @@ public class PlayerMovement : MonoBehaviour
 
     // jumping related
     private bool isGrounded;
-    [SerializeField] private bool isJumping = false;
+    private float jumpStartTimer = 0f;
+    private bool isJumping = false;
+    private float defaultgravity;
     [SerializeField] private float highJumpMinPressingTime = 1.5f;
-    [SerializeField] private float jumpStartTimer = 0f;
-    [SerializeField] private float defaultgravity;
     [SerializeField] private float jumpForce = 15.0f;
 
     // canMove Setter
     public void SetCanMove(bool canmove) { canMove = canmove;  }
+
+    public int GetPerspective() { return perspective; }
+
 
     void Forcedjump() 
     {
