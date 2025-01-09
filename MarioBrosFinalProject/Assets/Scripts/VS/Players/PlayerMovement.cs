@@ -8,17 +8,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // checked
     // objects
     private Rigidbody2D rb;
     private Animator Animator;
-    [SerializeField] private GameManager manager;
 
-    // collidders
-    [SerializeField] private BoxCollider2D lowerCollider;
-    [SerializeField] private BoxCollider2D upperCollider;
-    
     // fields
+    //keycodes
+    [SerializeField] private KeyCode jumpKey;
+    [SerializeField] private KeyCode moveRightKey;
+    [SerializeField] private KeyCode moveLeftKey;
+    [SerializeField] private KeyCode sprintKey;
+
     // general
     [SerializeField] private bool canMove = true;
     
@@ -64,13 +64,13 @@ public class PlayerMovement : MonoBehaviour
     private void JumpIntensity()
     {
         // if W pressed 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(jumpKey))
         {
             jumpStartTimer += Time.deltaTime;
         }
 
         // if W keeps pressed after a time threshold
-        if (Input.GetKeyUp(KeyCode.W) && jumpStartTimer > highJumpMinPressingTime)
+        if (Input.GetKeyUp(jumpKey) && jumpStartTimer > highJumpMinPressingTime)
         {
             rb.gravityScale = defaultgravity * 3f;
         }
@@ -108,18 +108,18 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(moveLeftKey))
             {
                 movedir = -1;
                 MoveOnXVisuals();
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(moveRightKey))
             {
                 movedir = 1;
                 MoveOnXVisuals();
             }
             else { movedir = 0; }
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(jumpKey))
             {
                 Jump();
             }
@@ -148,7 +148,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
-        manager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 
         movementSpeed = lowspeed;
         defaultgravity = rb.gravityScale;
