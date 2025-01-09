@@ -14,14 +14,12 @@ public class PlayerAttack: MonoBehaviour
     [SerializeField] private KeyCode attackKey;
 
     // fields
-    private bool isDeadMario = false;
-    private bool isFireMario = true;
+    private bool isFireMario = false;
     private float fireBallTimer;
     [SerializeField] private float rechargeTime;
     [SerializeField] private GameObject fireBall;
     
     public void SetFireMario(bool firemario) { isFireMario=firemario; }
-    public void SetDead(bool dead) { isDeadMario=dead; }
     public int GetPerspective() { return perspective; }
 
     public void ThrowFire()
