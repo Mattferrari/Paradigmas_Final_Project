@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 41ad1c24286f4ca488275e45349655bf
+  - enabled: 1
+    path: Assets/Scenes/VsPVP.unity
+    guid: b80fec243f4f50f459cf5a53fbb72536
   m_configObjects: {}

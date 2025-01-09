@@ -77,6 +77,7 @@
     <Compile Include="Assets\Scripts\PowerUps\Instance\CoinLogic.cs" />
     <Compile Include="Assets\Scripts\GeneralGame\GameManager.cs" />
     <Compile Include="Assets\Scripts\Blocks\PoleFlag.cs" />
+    <Compile Include="Assets\Scripts\Menu\VsMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\LevelSelector.cs" />
     <Compile Include="Assets\Scripts\Enemy\Goomba\Goomba.cs" />
     <Compile Include="Assets\Scripts\Blocks\PipeControler.cs" />
