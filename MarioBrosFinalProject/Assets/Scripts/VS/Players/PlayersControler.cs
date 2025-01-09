@@ -5,198 +5,82 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayersController : MonoBehaviour
-{
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float jumpForce = 15.0f;
-    private Rigidbody2D rb;
-
-    private bool isGrounded;
-    public bool canMove = true;
-    public float acceleration = 1000f;
-    public float maxspeed = 8f;
-    public int move = 0;
-    public bool isJumping = false;
-    public float jumpTimer = 0f;
-    public float maxJumpingTime = 1.5f;
-
-    public bool Attacked = false;
-    public bool Dead = false;
-
+{    
+    // objects
     private Animator Animator;
-
-    public BoxCollider2D boxCollider;
-    public float defaultgravity;
-
-    public bool isBigMario = false;
-    public bool isFireMario = false;
-    public float fireBallTimer;
-    public float rechargeTime;
-
-    public GameObject fireBall;
-    public int perspective;
-
     public GameManager manager;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        Animator = GetComponent<Animator>();
-        boxCollider = GetComponent<BoxCollider2D>();
-        defaultgravity = rb.gravityScale;
-        fireBallTimer = Time.time;
-        perspective = 1;
-        manager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
-    }
+    // Enemy
+    private PlayersController enemy;
+    private BoxCollider2D enemyUpper;
+    private BoxCollider2D enemyLower;
 
-    void Update()
-    {
+    // movement related
+    private PlayerMovement movement;
+    private bool canMove = true;
 
-        if (canMove)
-        {
-            if (isJumping)
-            {
-                if (rb.velocity.y < 0f)
-                {
-                    rb.gravityScale = defaultgravity;
-                    if (isGrounded)
-                    {
-                        isJumping = false;
-                        jumpTimer = 0f;
-                    }
-                }
-                else if (rb.velocity.y > 0f)
-                {
-                    if (Input.GetKey(KeyCode.W))
-                    {
-                        jumpTimer += Time.deltaTime;
-                    }
-                    if (Input.GetKeyUp(KeyCode.W))
-                    {
-                        if (jumpTimer > maxJumpingTime)
-                        {
-                            rb.gravityScale = defaultgravity * 3f;
-                        }
-                    }
-                }
-            }
+    //atack related
+    private PlayerAttack attack;
 
-            if (Input.GetKey(KeyCode.A)) 
-            {
-                move = -1;
-                transform.localScale = new Vector2(move, 1);
-                if (perspective > 0)
-                {
-                    ChangePerspective();
-                }
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                move = 1;
-                transform.localScale = new Vector2(move, 1);
-                if (perspective < 0)
-                {
-                    ChangePerspective();
-                }
-            }
-            else { move = 0; }
+    // colliders
+    [SerializeField] private BoxCollider2D upperCollider;
+    public BoxCollider2D GetUpperCollider() {  return upperCollider; }
+    [SerializeField] private BoxCollider2D lowerCollider;
+    public BoxCollider2D GetLowerCollider() { return lowerCollider; }
 
-            //rb.velocity = new Vector2(move * speed, rb.velocity.y);
+    // growing params
+    // lower Collider:
+    // size
+    [SerializeField] private float lowerXIncrement = 0.3f;
+    [SerializeField] private float lowerYIncrement = 0.65f;
+    // Offset
+    [SerializeField] private float lowerXOffset = 0f;
+    [SerializeField] protected float lowerYOffset = 0.38f;
+    // UpperCollider
+    // size
+    [SerializeField] public float upperXIncrement = 0.2f;
+    [SerializeField] public float upperYIncrement = 0.2f;
+    // Offset
+    [SerializeField] public float upperXOffset = 0f;
+    [SerializeField] public float upperYOffset = 0.9f;
 
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Jump();
-            }
-        }
+    // fields
+    public bool Dead = false;
+    public bool isBigMario = false;
+    public bool isFireMario = false;
 
-        if (Attacked)
-        {
-            Jump();
-            Attacked = false;
-        }
-
-        if (Dead)
-        {
-            Debug.Log("I lost");
-            manager.LooseLife();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && isFireMario && Time.time - fireBallTimer > rechargeTime)
-        {
-            ThrowFire();
-            fireBallTimer = Time.time;
-
-        }
-
-        if (rb)
-        {
-            Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
-        }
-        Animator.SetBool("Grounded", isGrounded);
-        Animator.SetBool("isBigMario", isBigMario);
-        Animator.SetBool("isFireMario", isFireMario);
-    }
-
-    private void FixedUpdate()
-    {
-        if (rb)
-        {
-            Vector2 velocity = new Vector2(move*speed, rb.velocity.y);
-            rb.velocity = velocity;
-        }
-    }
-
-    void ChangePerspective()
-    {
-        perspective *= -1;
-    }
-    void Jump()
-    {
-        
-        if (isGrounded && !Attacked) // normal jump
-        {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            isGrounded = false;
-        }
-        if (!isGrounded && Attacked) // jump when you land on a an enemy
-        {
-            rb.AddForce(new Vector2(0, jumpForce / 2), ForceMode2D.Impulse);
-            Attacked = false;
-        }
-        isJumping = true;
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground") | collision.gameObject.CompareTag("Element"))
-        {
-            isGrounded = true;  // Permite saltar nuevamente cuando Mario toca el suelo
-        }
-    }
 
     public void GetHit()
     {
         if (isFireMario)
         {
             isFireMario = false;
+            attack.SetFireMario(isFireMario);
             isBigMario = true;
         }
         else if (isBigMario)
         {
             isBigMario = false;
-            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / 2);
-            boxCollider.offset = new Vector2(boxCollider.offset.x, boxCollider.offset.y - 0.5f);
+            lowerCollider.size = new Vector2(lowerCollider.size.x - lowerXIncrement, lowerCollider.size.y - lowerYIncrement);
+            lowerCollider.offset = new Vector2(lowerCollider.offset.x - lowerXOffset, lowerCollider.offset.y - lowerYOffset);
+
+            upperCollider.size = new Vector2(upperCollider.size.x - upperXIncrement, upperCollider.size.y - upperYIncrement);
+            upperCollider.offset = new Vector2(upperCollider.offset.x - upperXOffset, upperCollider.offset.y - upperYOffset);
+
         }
         else
         {
             Die();
         }
     }
+
     public void Die()
     {
-        Debug.Log("Mori");
-        //Eliminar colliders
-        Destroy(GetComponent<BoxCollider2D>());
+        // Destroy colliders
+        Destroy(upperCollider);
+        Destroy(lowerCollider);
 
-        //Eliminar rigidbody
+        // Destroy rigidbody
         Destroy(GetComponent<Rigidbody2D>());
 
         //Wait one second and continue
@@ -214,18 +98,62 @@ public class PlayersController : MonoBehaviour
     public void FireMario()
     {
         isFireMario = true;
+        attack.SetFireMario(isFireMario);
         isBigMario = false;
     }
 
-    public void ThrowFire()
-    {
-        Vector3 offset = new Vector3(perspective, 0, 0);
-        Vector3 spawnPosition = transform.position + offset;
-        GameObject fireball = Instantiate(fireBall, spawnPosition, Quaternion.identity);
-    }
     public void BigMario()
     {
         isBigMario = true;
+        lowerCollider.size = new Vector2(lowerCollider.size.x + lowerXIncrement, lowerCollider.size.y + lowerYIncrement);
+        lowerCollider.offset = new Vector2(lowerCollider.offset.x - lowerXOffset, lowerCollider.offset.y + lowerYOffset);
+
+        upperCollider.size = new Vector2(upperCollider.size.x + upperXIncrement, upperCollider.size.y + upperYIncrement);
+        upperCollider.offset = new Vector2(upperCollider.offset.x + upperXOffset, upperCollider.offset.y + upperYOffset);
     }
 
+    void Start()
+    {
+        // find enemy player
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player"); 
+        foreach (GameObject player in players)
+        { 
+            if (player != this.gameObject) 
+            {
+                enemy = player.GetComponent<PlayersController>();
+                break;
+            }
+        }
+        // get enemy colliders
+        enemyUpper = enemy.GetUpperCollider();
+        enemyLower = enemy.GetLowerCollider();
+
+        Animator = GetComponent<Animator>();
+        manager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        
+        // Atack related
+        attack = GetComponent<PlayerAttack>();
+
+        //PlayerMovement related
+        movement = GetComponent<PlayerMovement>();
+        movement.SetCanMove(canMove);
+    }
+
+    void Update()
+    {
+        if (Dead)
+        {
+            manager.LooseLife();
+        }
+        Animator.SetBool("isBigMario", isBigMario);
+        Animator.SetBool("isFireMario", isFireMario);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider == enemyLower && collision.otherCollider == upperCollider) 
+        {
+            GetHit();
+        }
+    }
 }
