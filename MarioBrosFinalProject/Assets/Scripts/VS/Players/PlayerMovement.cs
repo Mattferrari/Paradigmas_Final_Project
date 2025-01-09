@@ -88,6 +88,15 @@ public class PlayerMovement : MonoBehaviour
         perspective = movedir;
     }
 
+    public void Sprint()
+    {
+        if (isGrounded) { movementSpeed = maxspeed; }
+    }
+
+    public void StopSprint()
+    {
+        movementSpeed = lowspeed;
+    }
     private void MoveCommands()
     {
         if (canMove)
@@ -119,6 +128,16 @@ public class PlayerMovement : MonoBehaviour
                 MoveOnXVisuals();
             }
             else { movedir = 0; }
+
+            if (Input.GetKey(sprintKey)) 
+            { 
+                Sprint(); 
+            }
+            else 
+            { 
+                StopSprint(); 
+            }
+
             if (Input.GetKeyDown(jumpKey))
             {
                 Jump();
