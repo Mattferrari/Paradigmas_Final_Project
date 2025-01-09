@@ -8,17 +8,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // checked
     // objects
     private Rigidbody2D rb;
     private Animator Animator;
-    [SerializeField] private GameManager manager;
 
-    // collidders
-    [SerializeField] private BoxCollider2D lowerCollider;
-    [SerializeField] private BoxCollider2D upperCollider;
-    
     // fields
+    //keycodes
+    [SerializeField] private KeyCode jumpKey;
+    [SerializeField] private KeyCode moveRightKey;
+    [SerializeField] private KeyCode moveLeftKey;
+    [SerializeField] private KeyCode sprintKey;
+
     // general
     [SerializeField] private bool canMove = true;
     
@@ -38,41 +38,28 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpStartTimer = 0f;
     [SerializeField] private float defaultgravity;
     [SerializeField] private float jumpForce = 15.0f;
-    
-    [SerializeField] private bool Attacked = false;
-
 
     // canMove Setter
     public void SetCanMove(bool canmove) { canMove = canmove;  }
 
-    void Jump()
+    void Forcedjump() 
     {
+        // set y speed = 0 before jumping
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.AddForce(new Vector2(0, jumpForce / 2), ForceMode2D.Impulse);
 
-        if (isGrounded && !Attacked) // normal jump
-        {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            isGrounded = false;
-        }
-        if (!isGrounded && Attacked) // jump when you land on a an enemy
-        {
-            rb.AddForce(new Vector2(0, jumpForce / 2), ForceMode2D.Impulse);
-            Attacked = false;
-        }
+        // modify variables
         isJumping = true;
     }
 
-    private void JumpIntensity()
+    void Jump()
     {
-        // if W pressed 
-        if (Input.GetKey(KeyCode.W))
+        if (isGrounded) // normal jump
         {
-            jumpStartTimer += Time.deltaTime;
-        }
-
-        // if W keeps pressed after a time threshold
-        if (Input.GetKeyUp(KeyCode.W) && jumpStartTimer > highJumpMinPressingTime)
-        {
-            rb.gravityScale = defaultgravity * 3f;
+            // set y speed = 0 before jumping
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            isJumping = true;
         }
     }
 
@@ -82,12 +69,37 @@ public class PlayerMovement : MonoBehaviour
         jumpStartTimer = 0f;
     }
 
+    private void JumpIntensity()
+    {
+        // if W pressed 
+        if (Input.GetKey(jumpKey))
+        {
+            jumpStartTimer += Time.deltaTime;
+        }
+
+        // if W keeps pressed after a time threshold
+        if (Input.GetKeyUp(jumpKey) && jumpStartTimer > highJumpMinPressingTime)
+        {
+            rb.gravityScale = defaultgravity * 3f;
+        }
+    }
+
     public void MoveOnXVisuals()
     {
         transform.localScale = new Vector2(movedir, 1);
         perspective = movedir;
     }
 
+    public void Sprint()
+    {
+        if (isGrounded) { movementSpeed = maxspeed; }
+    }
+
+    public void StopSprint()
+    {
+        movementSpeed = lowspeed;
+    }
+    
     private void MoveCommands()
     {
         if (canMove)
@@ -108,30 +120,33 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
-            if (Input.GetKey(KeyCode.A))
+            if (Input.GetKey(moveLeftKey))
             {
                 movedir = -1;
                 MoveOnXVisuals();
             }
-            else if (Input.GetKey(KeyCode.D))
+            else if (Input.GetKey(moveRightKey))
             {
                 movedir = 1;
                 MoveOnXVisuals();
             }
             else { movedir = 0; }
-            if (Input.GetKeyDown(KeyCode.W))
+
+            if (Input.GetKey(sprintKey)) 
+            { 
+                Sprint(); 
+            }
+            else 
+            { 
+                StopSprint(); 
+            }
+
+            if (Input.GetKeyDown(jumpKey))
             {
                 Jump();
             }
 
         }
-    }
-    
-    private void AtackPushback()
-    {
-        Attacked = true;
-        Jump();
-        Attacked = false;
     }
 
     private void AnimationMovement() 
@@ -148,7 +163,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
-        manager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
 
         movementSpeed = lowspeed;
         defaultgravity = rb.gravityScale;
@@ -173,7 +187,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground") | collision.gameObject.CompareTag("Element"))
         {
-            isGrounded = true;  // Permite saltar nuevamente cuando Mario toca el suelo
+            isGrounded = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") | collision.gameObject.CompareTag("Element"))
+        {
+            isGrounded = false;
         }
     }
 }
