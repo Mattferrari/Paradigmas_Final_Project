@@ -38,27 +38,35 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpStartTimer = 0f;
     [SerializeField] private float defaultgravity;
     [SerializeField] private float jumpForce = 15.0f;
-    
-    [SerializeField] private bool Attacked = false;
-
 
     // canMove Setter
     public void SetCanMove(bool canmove) { canMove = canmove;  }
 
+    void Forcedjump() 
+    {
+        // set y speed = 0 before jumping
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.AddForce(new Vector2(0, jumpForce / 2), ForceMode2D.Impulse);
+
+        // modify variables
+        isJumping = true;
+    }
+
     void Jump()
     {
-
-        if (isGrounded && !Attacked) // normal jump
+        if (isGrounded) // normal jump
         {
+            // set y speed = 0 before jumping
+            rb.velocity = new Vector2(rb.velocity.x, 0);
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            isGrounded = false;
+            isJumping = true;
         }
-        if (!isGrounded && Attacked) // jump when you land on a an enemy
-        {
-            rb.AddForce(new Vector2(0, jumpForce / 2), ForceMode2D.Impulse);
-            Attacked = false;
-        }
-        isJumping = true;
+    }
+
+    private void StopJumping()
+    {
+        isJumping = false;
+        jumpStartTimer = 0f;
     }
 
     private void JumpIntensity()
@@ -76,12 +84,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void StopJumping()
-    {
-        isJumping = false;
-        jumpStartTimer = 0f;
-    }
-
     public void MoveOnXVisuals()
     {
         transform.localScale = new Vector2(movedir, 1);
@@ -97,6 +99,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movementSpeed = lowspeed;
     }
+    
     private void MoveCommands()
     {
         if (canMove)
@@ -145,13 +148,6 @@ public class PlayerMovement : MonoBehaviour
 
         }
     }
-    
-    private void AtackPushback()
-    {
-        Attacked = true;
-        Jump();
-        Attacked = false;
-    }
 
     private void AnimationMovement() 
     { 
@@ -191,7 +187,14 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Ground") | collision.gameObject.CompareTag("Element"))
         {
-            isGrounded = true;  // Permite saltar nuevamente cuando Mario toca el suelo
+            isGrounded = true;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground") | collision.gameObject.CompareTag("Element"))
+        {
+            isGrounded = false;
         }
     }
 }
