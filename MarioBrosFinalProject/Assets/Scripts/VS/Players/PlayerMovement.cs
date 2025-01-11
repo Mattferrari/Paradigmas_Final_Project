@@ -103,24 +103,28 @@ public class PlayerMovement : MonoBehaviour
         movementSpeed = lowspeed;
     }
     
+    public void JumpSettings()
+    {
+        if (rb.velocity.y <= 0f)
+        {
+            rb.gravityScale = defaultgravity;
+            if (isGrounded)
+            {
+                StopJumping();
+            }
+        }
+        else if (rb.velocity.y > 0f)
+        {
+            JumpIntensity();
+        }
+    }
     private void MoveCommands()
     {
         if (canMove)
         {
             if (isJumping)
             {
-                if (rb.velocity.y <= 0f)
-                {
-                    rb.gravityScale = defaultgravity;
-                    if (isGrounded)
-                    {
-                        StopJumping();
-                    }
-                }
-                else if (rb.velocity.y > 0f)
-                {
-                    JumpIntensity();
-                }
+                JumpSettings();
             }
 
             if (Input.GetKey(moveLeftKey))
@@ -193,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
         }
     }
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground") | collision.gameObject.CompareTag("Element"))

@@ -112,22 +112,29 @@ public class PlayersController : MonoBehaviour
         upperCollider.offset = new Vector2(upperCollider.offset.x + upperXOffset, upperCollider.offset.y + upperYOffset);
     }
 
-    void Start()
+    public PlayersController GetEnemy()
     {
-        // find enemy player
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player"); 
+        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
         foreach (GameObject player in players)
-        { 
-            if (player != this.gameObject) 
+        {
+            if (player != this.gameObject)
             {
                 enemy = player.GetComponent<PlayersController>();
                 break;
             }
         }
+        return enemy;
+    }
+
+    void Start()
+    {   
+        PlayersController enemy = GetEnemy();
+
         // get enemy colliders
         enemyUpper = enemy.GetUpperCollider();
         enemyLower = enemy.GetLowerCollider();
 
+        // get Managers
         Animator = GetComponent<Animator>();
         manager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
         
