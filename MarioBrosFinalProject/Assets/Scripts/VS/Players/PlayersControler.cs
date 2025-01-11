@@ -8,7 +8,7 @@ public class PlayersController : MonoBehaviour
 {    
     // objects
     private Animator Animator;
-    public GameManager manager;
+    public PlayerHUDController manager;
 
     // Enemy
     private PlayersController enemy;
@@ -115,6 +115,7 @@ public class PlayersController : MonoBehaviour
     public PlayersController GetEnemy()
     {
         GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+        
         foreach (GameObject player in players)
         {
             if (player != this.gameObject)
@@ -136,7 +137,7 @@ public class PlayersController : MonoBehaviour
 
         // get Managers
         Animator = GetComponent<Animator>();
-        manager = GameObject.FindWithTag("GameManager").GetComponent<GameManager>();
+        manager = GetComponent<PlayerHUDController>();
         
         // Atack related
         attack = GetComponent<PlayerAttack>();
@@ -160,6 +161,7 @@ public class PlayersController : MonoBehaviour
     {
         if (collision.collider == enemyLower && collision.otherCollider == upperCollider) 
         {
+            Debug.Log("colide");
             GetHit();
         }
     }
