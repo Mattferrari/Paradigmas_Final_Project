@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PoleFlag : MonoBehaviour
 {
+    private PlayerController player;
     public Collider2D extraLifeCollider;
     public Collider2D mainCollider;
-    public GameManager gameManager;
+    private GameManager gameManager;
     private bool levelPassed = false;
     public GameObject flag;
 
@@ -36,8 +37,9 @@ public class PoleFlag : MonoBehaviour
     {
         float elapsedPlayer = 0f;
         float durationPlayer = 2f;
-        GameObject player = GameObject.FindWithTag("Player");
-        player.GetComponent<PlayerController>().canMove = false;
+        player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+        player.FlagSound();
+        player.canMove = false;
         Vector2 startPositionPlayer = player.transform.position;
 
         while (elapsedPlayer < durationPlayer)

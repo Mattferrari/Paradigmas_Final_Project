@@ -9,6 +9,15 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 15.0f;
     private Rigidbody2D rb;
 
+    [SerializeField] private AudioSource themeSource;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip themeSound;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip growSound;
+    [SerializeField] private AudioClip deadSound;
+    [SerializeField] private AudioClip coinSound;
+    [SerializeField] private AudioClip flagSound;
+
     private bool isGrounded;
     public bool canMove = true;
     public float acceleration = 1000f;
@@ -41,6 +50,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         boxCollider = GetComponent<BoxCollider2D>();
+        themeSource.loop = true;
+        themeSource.Play();
         defaultgravity = rb.gravityScale;
         fireBallTimer = Time.time;
         perspective = 1;
@@ -110,6 +121,12 @@ public class PlayerController : MonoBehaviour
                 {
                     Jump();
                 }
+
+                //Si el valor de y es disinto al anterior ground = false
+                if (rb.velocity.y != 0)
+                {
+                    isGrounded = false;
+                }
             }
 
             if (Attacked)
@@ -159,6 +176,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             isGrounded = false;
+            audioSource.PlayOneShot(jumpSound);
         }
         if (!isGrounded && Attacked) // jump when you land on a an enemy
         {
@@ -195,7 +213,9 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
-        Dead = true;
+        canMove = false;
+        audioSource.PlayOneShot(deadSound);
+        themeSource.Stop();
         Debug.Log("Mori");
         //Eliminar colliders
         Destroy(GetComponent<BoxCollider2D>());
@@ -210,13 +230,14 @@ public class PlayerController : MonoBehaviour
     IEnumerator DeadAnimation()
     {
         Animator.SetBool("MarioDead", true);
-        yield return new WaitForSeconds(2);
-        canMove = false;
+        yield return new WaitForSeconds(3);
         Dead = true;
+        Debug.Log("Dead");
     }
 
     public void FireMario()
     {
+        audioSource.PlayOneShot(growSound);
         isFireMario = true;
         isBigMario = false;
     }
@@ -232,7 +253,19 @@ public class PlayerController : MonoBehaviour
     }
     public void BigMario()
     {
+        audioSource.PlayOneShot(growSound);
         isBigMario = true;
+    }
+
+    public void PickCoin()
+    {
+        audioSource.PlayOneShot(coinSound);
+    }
+
+    public void FlagSound()
+    {
+        themeSource.Stop();
+        audioSource.PlayOneShot(flagSound);
     }
 
 }
