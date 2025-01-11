@@ -20,10 +20,13 @@ public class FireFlower : PowerUp
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            if (!Mario.isBigMario)
+            {
+                Mario.boxCollider.size = new Vector2(Mario.boxCollider.size.x, Mario.boxCollider.size.y * 2);
+                Mario.boxCollider.offset = new Vector2(Mario.boxCollider.offset.x, Mario.boxCollider.offset.y + 0.5f);
+            }
             Mario.FireMario();
             Destroy(gameObject); // Destruye el GameObject que contiene este script
-            Mario.boxCollider.size = new Vector2(Mario.boxCollider.size.x, Mario.boxCollider.size.y * 2);
-            Mario.boxCollider.offset = new Vector2(Mario.boxCollider.offset.x, Mario.boxCollider.offset.y + 0.5f);
         }
     }
     public override void SetMario(PlayerController player)
