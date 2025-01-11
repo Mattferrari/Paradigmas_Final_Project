@@ -30,8 +30,6 @@ public class PlayerController : MonoBehaviour
     public float jumpTimer = 0f;
     public float maxJumpingTime = 1.5f;
 
-    public float lastTimeHit = Time.time;
-
     public bool Attacked = false;
     public bool Dead = false;
 

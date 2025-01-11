@@ -7,11 +7,27 @@
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playercontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\generalgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\generalgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\mario\\onedrive\\escritorio\\icai3.1\\paradigmas\\repositorio_proyecto\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\menu\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\menu\\uimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\enemy\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\mario\\onedrive\\escritorio\\icai3.1\\paradigmas\\repositorio_proyecto\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\enemy\\koopa\\shell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\koopa\\shell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\enemy\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\goomba\\goomba.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|c:\\users\\mario\\onedrive\\escritorio\\icai3.1\\paradigmas\\repositorio_proyecto\\paradigmas_final_project\\mariobrosfinalproject\\assets\\scripts\\blocks\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\blocks\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\blocks\\pipecontroler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -23,20 +39,12 @@
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerups\\instance\\coinlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\enemy\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\koopa\\koopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\enemy\\koopa\\koopapatroopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy\\koopa\\koopapatroopa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\powerups\\instance\\mushroomlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\powerups\\instance\\mushroomlogic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\assets\\scripts\\generalgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB5C3696-5379-2463-A6AE-80DC3AA87EA1}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\generalgame\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +54,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -55,6 +63,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UIManager.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Menu\\UIManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Menu\\UIManager.cs",
+              "ToolTip": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Menu\\UIManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Menu\\UIManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:10:35.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Shell.cs",
+              "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Enemy\\Koopa\\Shell.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Koopa\\Shell.cs",
+              "ToolTip": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Enemy\\Koopa\\Shell.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy\\Koopa\\Shell.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T22:10:11.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "PipeControler.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Blocks\\PipeControler.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Blocks\\PipeControler.cs",
@@ -62,12 +96,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Blocks\\PipeControler.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAgwDAAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T11:32:58.914Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T11:32:58.914Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "PoleFlag.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Blocks\\PoleFlag.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Blocks\\PoleFlag.cs",
@@ -75,12 +108,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Blocks\\PoleFlag.cs",
               "ViewState": "AgIAACIAAAAAAAAAAAAQwCgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T06:47:13.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T06:47:13.657Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Goomba.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Enemy\\Goomba\\Goomba.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Goomba\\Goomba.cs",
@@ -88,12 +120,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\Goomba\\Goomba.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAiwBwAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T08:19:08.835Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T08:19:08.835Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "CoinLogic.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\PowerUps\\Instance\\CoinLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUps\\Instance\\CoinLogic.cs",
@@ -101,8 +132,7 @@
               "RelativeToolTip": "Assets\\Scripts\\PowerUps\\Instance\\CoinLogic.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T08:41:23.118Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-11T08:41:23.118Z"
             },
             {
               "$type": "Document",
@@ -112,26 +142,27 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerControler.cs",
               "ToolTip": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Player\\PlayerControler.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerControler.cs",
-              "ViewState": "AgIAALkAAAAAAAAAAAAkwMEAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAYwB4AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T06:56:46.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "GameManager.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\GeneralGame\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\GeneralGame\\GameManager.cs",
               "ToolTip": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\GeneralGame\\GameManager.cs",
               "RelativeToolTip": "Assets\\Scripts\\GeneralGame\\GameManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T08:39:57.383Z"
+              "WhenOpened": "2025-01-11T08:39:57.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "MushroomLogic.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\PowerUps\\Instance\\MushroomLogic.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\PowerUps\\Instance\\MushroomLogic.cs",
@@ -143,20 +174,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Koopa.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Enemy\\Koopa\\Koopa.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Koopa\\Koopa.cs",
               "ToolTip": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Enemy\\Koopa\\Koopa.cs",
               "RelativeToolTip": "Assets\\Scripts\\Enemy\\Koopa\\Koopa.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAADwvwAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T06:54:39.439Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "KoopaPatroopa.cs",
               "DocumentMoniker": "C:\\Users\\mario\\OneDrive\\Escritorio\\ICAI3.1\\Paradigmas\\Repositorio_Proyecto\\Paradigmas_Final_Project\\MarioBrosFinalProject\\Assets\\Scripts\\Enemy\\Koopa\\KoopaPatroopa.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy\\Koopa\\KoopaPatroopa.cs",
