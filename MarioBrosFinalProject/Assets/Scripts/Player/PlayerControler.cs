@@ -49,91 +49,95 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
-        if (canMove)
-        {
-            if (isJumping)
-            {
-                if (rb.velocity.y < 0f)
-                {
-                    rb.gravityScale = defaultgravity;
-                    if (isGrounded)
-                    {
-                        isJumping = false;
-                        jumpTimer = 0f;
-                    }
-                }
-                else if (rb.velocity.y > 0f)
-                {
-                    if (Input.GetKey(KeyCode.W))
-                    {
-                        jumpTimer += Time.deltaTime;
-                    }
-                    if (Input.GetKeyUp(KeyCode.W))
-                    {
-                        if (jumpTimer > maxJumpingTime)
-                        {
-                            rb.gravityScale = defaultgravity * 3f;
-                        }
-                    }
-                }
-            }
-
-            if (Input.GetKey(KeyCode.A)) 
-            {
-                move = -1;
-                transform.localScale = new Vector2(move, 1);
-                if (perspective > 0)
-                {
-                    ChangePerspective();
-                }
-            }
-            else if (Input.GetKey(KeyCode.D))
-            {
-                move = 1;
-                transform.localScale = new Vector2(move, 1);
-                if (perspective < 0)
-                {
-                    ChangePerspective();
-                }
-            }
-            else { move = 0; }
-
-            //rb.velocity = new Vector2(move * speed, rb.velocity.y);
-
-            if (Input.GetKeyDown(KeyCode.W))
-            {
-                Jump();
-            }
-        }
-
-        if (Attacked)
-        {
-            Jump();
-            Attacked = false;
-        }
-
         if (Dead)
         {
             Debug.Log("I lost");
             manager.LooseLife();
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && isFireMario && Time.time - fireBallTimer > rechargeTime)
+        else
         {
-            ThrowFire();
-            fireBallTimer = Time.time;
+            if (canMove)
+            {
+                if (isJumping)
+                {
+                    if (rb.velocity.y < 0f)
+                    {
+                        rb.gravityScale = defaultgravity;
+                        if (isGrounded)
+                        {
+                            isJumping = false;
+                            jumpTimer = 0f;
+                        }
+                    }
+                    else if (rb.velocity.y > 0f)
+                    {
+                        if (Input.GetKey(KeyCode.W))
+                        {
+                            jumpTimer += Time.deltaTime;
+                        }
+                        if (Input.GetKeyUp(KeyCode.W))
+                        {
+                            if (jumpTimer > maxJumpingTime)
+                            {
+                                rb.gravityScale = defaultgravity * 3f;
+                            }
+                        }
+                    }
+                }
 
-        }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    move = -1;
+                    transform.localScale = new Vector2(move, 1);
+                    if (perspective > 0)
+                    {
+                        ChangePerspective();
+                    }
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    move = 1;
+                    transform.localScale = new Vector2(move, 1);
+                    if (perspective < 0)
+                    {
+                        ChangePerspective();
+                    }
+                }
+                else { move = 0; }
 
-        if (rb)
-        {
-            Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+
+                if (Input.GetKeyDown(KeyCode.W))
+                {
+                    Jump();
+                }
+            }
+
+            if (Attacked)
+            {
+                Jump();
+                Attacked = false;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && isFireMario && Time.time - fireBallTimer > rechargeTime)
+            {
+                ThrowFire();
+                fireBallTimer = Time.time;
+
+            }
+
+            if (rb)
+            {
+                Animator.SetFloat("SpeedX", Mathf.Abs(rb.velocity.x));
+            }
+            Animator.SetBool("Grounded", isGrounded);
+            Animator.SetBool("isBigMario", isBigMario);
+            Animator.SetBool("isFireMario", isFireMario);
         }
-        Animator.SetBool("Grounded", isGrounded);
-        Animator.SetBool("isBigMario", isBigMario);
-        Animator.SetBool("isFireMario", isFireMario);
     }
+
+        
+
+        
 
     private void FixedUpdate()
     {
@@ -191,6 +195,7 @@ public class PlayerController : MonoBehaviour
     }
     public void Die()
     {
+        Dead = true;
         Debug.Log("Mori");
         //Eliminar colliders
         Destroy(GetComponent<BoxCollider2D>());

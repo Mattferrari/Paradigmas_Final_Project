@@ -12,6 +12,7 @@ public class FireFlower : PowerUp
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        //Mario = GameObject.FindWithTag("Player").GetComponent<PlayerControler>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

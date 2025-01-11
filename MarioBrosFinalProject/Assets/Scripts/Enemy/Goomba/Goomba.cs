@@ -15,6 +15,8 @@ public class Goomba : MonoBehaviour, IEnemy
     public Collider2D superiorCollider;
     public Collider2D lowerCollider;
 
+    private bool dead = false;
+
     public void Move()
     {
         rb.velocity = new Vector2(movedir * speed, rb.velocity.y);
@@ -22,13 +24,15 @@ public class Goomba : MonoBehaviour, IEnemy
 
     public void GetKilled()
     {
-        Destroy(gameObject, 1f); // Destruye el GameObject que contiene este script
+         // Destruye el GameObject que contiene este script
         Animator.SetTrigger("GoombaDead");
         Destroy(GetComponent<BoxCollider2D>());
         Destroy(GetComponent<CircleCollider2D>());
         speed = 0;
         Destroy(GetComponent<Rigidbody2D>());
-        
+        Destroy(gameObject, 1f);
+        dead = true;
+
     }
 
     public void Atack() { Mario.GetHit(); }
@@ -43,7 +47,11 @@ public class Goomba : MonoBehaviour, IEnemy
     // Update is called once per frame
     void Update()
     {
-        Move();
+        if (!dead)
+        {
+            Move();
+        }
+        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

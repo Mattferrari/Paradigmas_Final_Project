@@ -64,6 +64,6 @@ public class MushroomLogic : PowerUp
     public override void SetMario(PlayerController player)
     {
         // Configuración específica para el hongo
-        Mario = player; // Ejemplo: el hongo le da una vida al jugador
+        Mario = player; 
     }
 }
