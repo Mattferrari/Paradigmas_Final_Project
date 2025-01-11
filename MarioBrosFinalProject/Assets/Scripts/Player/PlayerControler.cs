@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip flagSound;
     [SerializeField] private AudioClip pipeSound;
     [SerializeField] private AudioClip killingSound;
+    [SerializeField] private AudioClip damageSound;
 
     private bool isGrounded;
     public bool canMove = true;
@@ -68,6 +69,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("I lost");
             manager.LooseLife();
+            Dead = false;
         }
         else
         {
@@ -126,8 +128,7 @@ public class PlayerController : MonoBehaviour
                     Jump();
                 }
 
-                //Si el valor de y es disinto al anterior ground = false
-                if (rb.velocity.y != 0)
+                if (rb.velocity.y > 0.1)
                 {
                     isGrounded = false;
                 }
@@ -199,24 +200,22 @@ public class PlayerController : MonoBehaviour
 
     public void GetHit()
     {
-        if (Time.time - lastTimeHit > 1)
+
+        audioSource.PlayOneShot(damageSound);
+        if (isFireMario)
         {
-            lastTimeHit = Time.time;
-            if (isFireMario)
-            {
-                isFireMario = false;
-                isBigMario = true;
-            }
-            else if (isBigMario)
-            {
-                isBigMario = false;
-                boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / 2);
-                boxCollider.offset = new Vector2(boxCollider.offset.x, boxCollider.offset.y - 0.5f);
-            }
-            else
-            {
-                Die();
-            }
+            isFireMario = false;
+            isBigMario = true;
+        }
+        else if (isBigMario)
+        {
+            isBigMario = false;
+            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / 2);
+            boxCollider.offset = new Vector2(boxCollider.offset.x, boxCollider.offset.y - 0.5f);
+        }
+        else
+        {
+            Die();
         }
     }
     public void Die()

@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     // general
     private bool canMove = true;
-    
+
     // X-movement related
     // direction
     private int perspective = 1;
@@ -40,12 +40,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumpForce = 15.0f;
 
     // canMove Setter
-    public void SetCanMove(bool canmove) { canMove = canmove;  }
+    public void SetCanMove(bool canmove) { canMove = canmove; }
 
     public int GetPerspective() { return perspective; }
 
 
-    void Forcedjump() 
+    void Forcedjump()
     {
         // set y speed = 0 before jumping
         rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -102,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movementSpeed = lowspeed;
     }
-    
+
     public void JumpSettings()
     {
         if (rb.velocity.y <= 0f)
@@ -139,13 +139,13 @@ public class PlayerMovement : MonoBehaviour
             }
             else { movedir = 0; }
 
-            if (Input.GetKey(sprintKey)) 
-            { 
-                Sprint(); 
+            if (Input.GetKey(sprintKey))
+            {
+                Sprint();
             }
-            else 
-            { 
-                StopSprint(); 
+            else
+            {
+                StopSprint();
             }
 
             if (Input.GetKeyDown(jumpKey))
@@ -156,8 +156,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void AnimationMovement() 
-    { 
+    private void AnimationMovement()
+    {
         //rb.velocity = new Vector2(move * speed, rb.velocity.y);
         if (rb)
         {

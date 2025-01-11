@@ -10,6 +10,7 @@ TagManager:
   - Mushroom
   - Attack
   - GameManager
+  - UIManager
   layers:
   - Default
   - TransparentFX

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public int maxCoins;
     public int level;
     public static GameManager instance;
+    public GameObject UImanager;
     // Start is called before the first frame update
     void Awake()
     {
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
     public void LooseLife()
     {
         numberLives--;
+        Debug.Log(numberLives);
         
         if (numberLives == 0)
         {
@@ -49,7 +51,7 @@ public class GameManager : MonoBehaviour
         }
         else 
         {
-            ReloadLevel();
+            StartCoroutine(LooseLifeScene());
             UpdateHUD();
         }
 
@@ -96,18 +98,50 @@ public class GameManager : MonoBehaviour
 
     private void GameOver()
     {
-        Debug.Log("Game Over!");
         numberLives = originalLives;
         numberCoins = 0;
         level = 1;
         UpdateHUD();
-        SceneManager.LoadScene("MainMenu"); // Escena de Game Over
+        StartCoroutine(GameOverScene());
     }
 
     private void ReloadLevel()
     {
         // Recarga la escena actual
         string currentScene = "Level" + level.ToString();
+
         SceneManager.LoadScene(currentScene);
+    }
+
+    private IEnumerator LooseLifeScene()
+    {
+        // Guardar el nombre de la escena actual
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        // Cargar la escena de "Game Over"
+        UImanager.SetActive(false);
+        SceneManager.LoadScene("LooseLife");
+
+        // Esperar 2 segundos
+        yield return new WaitForSeconds(2);
+
+        // Regresar a la escena original
+        
+        SceneManager.LoadScene(currentScene);
+        UImanager.SetActive(true);
+    }
+
+    private IEnumerator GameOverScene()
+    {
+        UImanager.SetActive(false);
+        SceneManager.LoadScene("GameOver");
+
+        // Esperar 2 segundos
+        yield return new WaitForSeconds(3);
+
+        // Regresar a la escena original
+
+        SceneManager.LoadScene("MainMenu");
+        UImanager.SetActive(true);
     }
 }
