@@ -17,6 +17,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip deadSound;
     [SerializeField] private AudioClip coinSound;
     [SerializeField] private AudioClip flagSound;
+    [SerializeField] private AudioClip pipeSound;
+    [SerializeField] private AudioClip killingSound;
 
     private bool isGrounded;
     public bool canMove = true;
@@ -26,6 +28,8 @@ public class PlayerController : MonoBehaviour
     public bool isJumping = false;
     public float jumpTimer = 0f;
     public float maxJumpingTime = 1.5f;
+
+    public float lastTimeHit = Time.time;
 
     public bool Attacked = false;
     public bool Dead = false;
@@ -187,7 +191,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") | collision.gameObject.CompareTag("Element"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Element"))
         {
             isGrounded = true;  // Permite saltar nuevamente cuando Mario toca el suelo
         }
@@ -195,20 +199,24 @@ public class PlayerController : MonoBehaviour
 
     public void GetHit()
     {
-        if (isFireMario)
+        if (Time.time - lastTimeHit > 1)
         {
-            isFireMario = false;
-            isBigMario = true;
-        }
-        else if (isBigMario)
-        {
-            isBigMario = false;
-            boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / 2);
-            boxCollider.offset = new Vector2(boxCollider.offset.x, boxCollider.offset.y - 0.5f);
-        }
-        else
-        {
-            Die();
+            lastTimeHit = Time.time;
+            if (isFireMario)
+            {
+                isFireMario = false;
+                isBigMario = true;
+            }
+            else if (isBigMario)
+            {
+                isBigMario = false;
+                boxCollider.size = new Vector2(boxCollider.size.x, boxCollider.size.y / 2);
+                boxCollider.offset = new Vector2(boxCollider.offset.x, boxCollider.offset.y - 0.5f);
+            }
+            else
+            {
+                Die();
+            }
         }
     }
     public void Die()
@@ -266,6 +274,16 @@ public class PlayerController : MonoBehaviour
     {
         themeSource.Stop();
         audioSource.PlayOneShot(flagSound);
+    }
+
+    public void PipeSound()
+    {
+        audioSource.PlayOneShot(pipeSound);
+    }
+
+    public void KillingSound()
+    {
+        audioSource.PlayOneShot(killingSound);
     }
 
 }

@@ -24,10 +24,11 @@ public class Goomba : MonoBehaviour, IEnemy
 
     public void GetKilled()
     {
-         // Destruye el GameObject que contiene este script
-        Animator.SetTrigger("GoombaDead");
-        Destroy(GetComponent<BoxCollider2D>());
+        // Destruye el GameObject que contiene este script
         Destroy(GetComponent<CircleCollider2D>());
+        Destroy(GetComponent<BoxCollider2D>());
+        Mario.KillingSound();
+        Animator.SetTrigger("GoombaDead");
         speed = 0;
         Destroy(GetComponent<Rigidbody2D>());
         Destroy(gameObject, 1f);
@@ -56,7 +57,7 @@ public class Goomba : MonoBehaviour, IEnemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Element") || collision.gameObject.CompareTag("Enemy"))
+        if (collision.otherCollider == lowerCollider && (collision.gameObject.CompareTag("Element") || collision.gameObject.CompareTag("Enemy")))
         {
             movedir *= -1;
         }
